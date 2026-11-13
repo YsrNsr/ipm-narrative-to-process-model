@@ -1,0 +1,205 @@
+<mxfile host="Electron">
+  <diagram name="Processus de Demande et Validation des Conges" id="vbGfqQdT0p-Ptnu52iap">
+    <mxGraphModel dx="2418" dy="2055" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=6;fillColor=#1E293B;strokeColor=#0F172A;strokeWidth=1.5;fontColor=#FFFFFF;align=center;verticalAlign=middle;shadow=1;" value="&lt;b style=&quot;font-size:16px;&quot;&gt;MODÉLISATION DU PROCESSUS DE TRAITEMENT D&amp;#39;UNE DEMANDE DE CONGÉS&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px;font-weight:normal;color:#64748B;&quot;&gt;Reconstitution logique et flux de décision inter-acteurs (BPMN / Swimlanes)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="2000" x="60" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-2" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fillColor=#EFF6FF;strokeColor=#93C5FD;strokeWidth=2;swimlaneFillColor=#FFFFFF;fontColor=#1E40AF;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;collapsible=0;" value="&lt;b&gt;COLLABORATEUR (Demandeur)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="180" width="1980" x="60" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-3" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fillColor=#F5F3FF;strokeColor=#C4B5FD;strokeWidth=2;swimlaneFillColor=#FFFFFF;fontColor=#5B21B6;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;collapsible=0;" value="&lt;b&gt;GESTIONNAIRE RH / PAIE (Narrateur &amp;amp; Coordinateur)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="260" width="1980" x="60" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-4" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fillColor=#FFFBEB;strokeColor=#FCD34D;strokeWidth=2;swimlaneFillColor=#FFFFFF;fontColor=#92400E;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;collapsible=0;" value="&lt;b&gt;DIRECTION (Arbitrage Congé Sans Solde)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="1980" x="60" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-5" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fillColor=#F0FDFA;strokeColor=#99F6E4;strokeWidth=2;swimlaneFillColor=#FFFFFF;fontColor=#115E59;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;collapsible=0;" value="&lt;b&gt;RESPONSABLE DIRECT (N+1 - Charge d&amp;#39;équipe)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="200" width="1980" x="60" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-6" parent="1" style="swimlane;html=1;horizontal=0;startSize=40;fillColor=#FDF2F8;strokeColor=#FBCFE8;strokeWidth=2;swimlaneFillColor=#FFFFFF;fontColor=#9D174D;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;collapsible=0;" value="&lt;b&gt;RESPONSABLE N+2 (Aval &gt; 10 jours consécutifs)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="1980" x="60" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-7" parent="1" style="shape=ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=2.5;fontColor=#166534;fontSize=10;fontStyle=1;" value="Besoin de&lt;br&gt;poser des congés" vertex="1">
+          <mxGeometry height="45" width="45" x="100" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.8;fontColor=#1E3A8A;fontSize=11;shadow=1;" value="&lt;b&gt;1. Envoyer un message&lt;/b&gt;&lt;br&gt;de demande de congés&lt;br&gt;&lt;i&gt;(dates et durée)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="65" width="150" x="180" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-9" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=2;fontColor=#854D0E;fontStyle=1;fontSize=10;shadow=1;" value="&lt;b&gt;Retrait ou&lt;br&gt;arrangement ?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="110" x="490" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-10" parent="1" style="shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=2.5;fontColor=#991B1B;fontSize=9;fontStyle=1;" value="Demande&lt;br&gt;retirée" vertex="1">
+          <mxGeometry height="35" width="35" x="495" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.8;fontColor=#1E3A8A;fontSize=11;shadow=1;" value="&lt;b&gt;4. Demander un&lt;br&gt;arrangement&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Congé sans solde)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="65" width="140" x="640" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-12" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=2;fontColor=#854D0E;fontStyle=1;fontSize=10;shadow=1;" value="&lt;b&gt;Accepter de&lt;br&gt;décaler ?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="110" x="1090" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-13" parent="1" style="shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=2.5;fontColor=#991B1B;fontSize=9;fontStyle=1;" value="Demande&lt;br&gt;abandonnée" vertex="1">
+          <mxGeometry height="35" width="35" x="1095" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.8;fontColor=#1E3A8A;fontSize=11;shadow=1;" value="&lt;b&gt;8b. Proposer de&lt;br&gt;nouvelles dates&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="135" x="1240" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=1.8;fontColor=#166534;fontSize=11;shadow=1;" value="&lt;b&gt;13. Recevoir la&lt;br&gt;confirmation&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Dates validées)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="65" width="140" x="1780" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-16" parent="1" style="shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#DCFCE7;strokeColor=#16A34A;strokeWidth=3;fontColor=#166534;fontSize=10;fontStyle=1;" value="Congé validé&lt;br&gt;&amp;amp; planifié" vertex="1">
+          <mxGeometry height="40" width="40" x="1960" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F5F3FF;strokeColor=#8B5CF6;strokeWidth=1.8;fontColor=#5B21B6;fontSize=11;shadow=1;" value="&lt;b&gt;2. Consulter le solde&lt;/b&gt;&lt;br&gt;de congés disponibles" vertex="1">
+          <mxGeometry height="65" width="150" x="180" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-18" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#EDE9FE;strokeColor=#8B5CF6;strokeWidth=1.5;fontColor=#5B21B6;fontSize=10;fontStyle=1;" value="Compteur /&lt;br&gt;Solde congés" vertex="1">
+          <mxGeometry height="45" width="120" x="195" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-19" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=2;fontColor=#854D0E;fontStyle=1;fontSize=10;shadow=1;" value="&lt;b&gt;Solde&lt;br&gt;suffisant ?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="100" x="365" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=1.8;fontColor=#991B1B;fontSize=11;shadow=1;" value="&lt;b&gt;3. Informer du solde&lt;br&gt;insuffisant&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="140" x="345" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F5F3FF;strokeColor=#8B5CF6;strokeWidth=1.8;fontColor=#5B21B6;fontSize=11;shadow=1;" value="&lt;b&gt;6. Transmettre au&lt;br&gt;Responsable Direct&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Demande N+1)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="65" width="145" x="510" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F5F3FF;strokeColor=#8B5CF6;strokeWidth=1.8;fontColor=#5B21B6;fontSize=11;shadow=1;" value="&lt;b&gt;8. Mettre en attente&lt;br&gt;&amp;amp; échanger&lt;/b&gt; avec le&lt;br&gt;collaborateur pour décaler" vertex="1">
+          <mxGeometry height="65" width="150" x="920" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-23" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=2;fontColor=#854D0E;fontStyle=1;fontSize=10;shadow=1;" value="&lt;b&gt;Durée &amp;gt; 10 j&lt;br&gt;consécutifs ?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="115" x="1250" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F5F3FF;strokeColor=#8B5CF6;strokeWidth=1.8;fontColor=#5B21B6;fontSize=11;shadow=1;" value="&lt;b&gt;9. Transmettre au&lt;br&gt;Responsable N+2&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Règle interne &gt;10j)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="65" width="145" x="1400" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F5F3FF;strokeColor=#8B5CF6;strokeWidth=1.8;fontColor=#5B21B6;fontSize=11;shadow=1;" value="&lt;b&gt;11. Enregistrer dans&lt;br&gt;le système de paie&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Impact bulletin)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="65" width="150" x="1590" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-26" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#EDE9FE;strokeColor=#8B5CF6;strokeWidth=1.5;fontColor=#5B21B6;fontSize=10;fontStyle=1;" value="Système de Paie&lt;br&gt;&amp;amp; Bulletins" vertex="1">
+          <mxGeometry height="45" width="120" x="1605" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F5F3FF;strokeColor=#8B5CF6;strokeWidth=1.8;fontColor=#5B21B6;fontSize=11;shadow=1;" value="&lt;b&gt;12. Envoyer la&lt;br&gt;confirmation&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Dates validées)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="65" width="140" x="1780" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-28" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=2;fontColor=#854D0E;fontStyle=1;fontSize=10;shadow=1;" value="&lt;b&gt;5. Validation&lt;br&gt;congé sans solde ?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="110" x="655" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-29" parent="1" style="shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=2.5;fontColor=#991B1B;fontSize=9;fontStyle=1;" value="Demande rejetée&lt;br&gt;(Refus sans solde)" vertex="1">
+          <mxGeometry height="35" width="35" x="810" y="588" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=1.8;fontColor=#115E59;fontSize=11;shadow=1;" value="&lt;b&gt;7. Analyser la charge&lt;br&gt;et les projets en cours&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="155" x="720" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-31" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=2;fontColor=#854D0E;fontStyle=1;fontSize=10;shadow=1;" value="&lt;b&gt;Feu vert N+1&lt;br&gt;accordé ?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="110" x="940" y="752" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;fillColor=#FDF2F8;strokeColor=#DB2777;strokeWidth=1.8;fontColor=#9D174D;fontSize=11;shadow=1;" value="&lt;b&gt;10. Examiner la&lt;br&gt;demande (&amp;gt;10j)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="145" x="1400" y="945" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-33" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=2;fontColor=#854D0E;fontStyle=1;fontSize=10;shadow=1;" value="&lt;b&gt;Aval N+2&lt;br&gt;accordé ?&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="110" x="1580" y="942" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-34" parent="1" style="shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=2.5;fontColor=#991B1B;fontSize=9;fontStyle=1;" value="Demande refusée&lt;br&gt;(Refus N+2)" vertex="1">
+          <mxGeometry height="35" width="35" x="1730" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-35" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#475569;strokeWidth=2;" target="FQ5-5dffK3y9o6Z7x8AX-8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-36" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#2563EB;strokeWidth=2;fontColor=#1E40AF;fontSize=10;fontStyle=1;labelBackgroundColor=#EFF6FF;labelBorderColor=#93C5FD;" target="FQ5-5dffK3y9o6Z7x8AX-17" value="Demande de congés">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-37" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;dashed=1;dashPattern=4 4;strokeColor=#8B5CF6;strokeWidth=1.5;endArrow=none;" target="FQ5-5dffK3y9o6Z7x8AX-18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-38" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#475569;strokeWidth=2;" target="FQ5-5dffK3y9o6Z7x8AX-19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-39" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DC2626;strokeWidth=2;fontColor=#991B1B;fontSize=10;fontStyle=1;labelBackgroundColor=#FEF2F2;labelBorderColor=#FCA5A5;" target="FQ5-5dffK3y9o6Z7x8AX-20" value="Non&lt;br&gt;(Insuffisant)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-40" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-19" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-21" value="Oui&lt;br&gt;(Solde suffisant)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-41" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-20" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DC2626;strokeWidth=2;fontColor=#991B1B;fontSize=10;fontStyle=1;labelBackgroundColor=#FEF2F2;labelBorderColor=#FCA5A5;" target="FQ5-5dffK3y9o6Z7x8AX-9" value="Information&lt;br&gt;solde insuffisant">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-42" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DC2626;strokeWidth=2;fontColor=#991B1B;fontSize=10;fontStyle=1;labelBackgroundColor=#FEF2F2;labelBorderColor=#FCA5A5;" target="FQ5-5dffK3y9o6Z7x8AX-10" value="Retrait de&lt;br&gt;la demande">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-43" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#2563EB;strokeWidth=2;fontColor=#1E40AF;fontSize=10;fontStyle=1;labelBackgroundColor=#EFF6FF;labelBorderColor=#93C5FD;" target="FQ5-5dffK3y9o6Z7x8AX-11" value="Demande&lt;br&gt;d&#39;arrangement">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-44" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#D97706;strokeWidth=2;fontColor=#92400E;fontSize=10;fontStyle=1;labelBackgroundColor=#FFFBEB;labelBorderColor=#FDE68A;" target="FQ5-5dffK3y9o6Z7x8AX-28" value="Demande de&lt;br&gt;congé sans solde">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-45" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-28" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DC2626;strokeWidth=2;fontColor=#991B1B;fontSize=10;fontStyle=1;labelBackgroundColor=#FEF2F2;labelBorderColor=#FCA5A5;" target="FQ5-5dffK3y9o6Z7x8AX-29" value="Refus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-46" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-28" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-30" value="Accord Direction&lt;br&gt;(Congé sans solde validé)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-47" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#0D9488;strokeWidth=2;fontColor=#115E59;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDFA;labelBorderColor=#99F6E4;" target="FQ5-5dffK3y9o6Z7x8AX-30" value="Transmission&lt;br&gt;demande">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-48" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-30" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#475569;strokeWidth=2;" target="FQ5-5dffK3y9o6Z7x8AX-31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-49" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-31" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#D97706;strokeWidth=2;fontColor=#92400E;fontSize=10;fontStyle=1;labelBackgroundColor=#FFFBEB;labelBorderColor=#FDE68A;" target="FQ5-5dffK3y9o6Z7x8AX-22" value="Attendre / Refus dates&lt;br&gt;(Projet en cours)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-50" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#2563EB;strokeWidth=2;fontColor=#1E40AF;fontSize=10;fontStyle=1;labelBackgroundColor=#EFF6FF;labelBorderColor=#93C5FD;" target="FQ5-5dffK3y9o6Z7x8AX-12" value="Échange : voir pour&lt;br&gt;décaler les dates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-51" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DC2626;strokeWidth=2;fontColor=#991B1B;fontSize=10;fontStyle=1;labelBackgroundColor=#FEF2F2;labelBorderColor=#FCA5A5;" target="FQ5-5dffK3y9o6Z7x8AX-13" value="Non&lt;br&gt;(Maintien / Abandon)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-52" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-14" value="Oui (Décalage&lt;br&gt;accepté)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-53" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#0D9488;strokeWidth=2;fontColor=#115E59;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDFA;labelBorderColor=#99F6E4;" target="FQ5-5dffK3y9o6Z7x8AX-30" value="Nouvelles dates proposées&lt;br&gt;(Réévaluation N+1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-54" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-31" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-23" value="Feu vert accordé&lt;br&gt;(Validation N+1)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-55" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-25" value="Non (&amp;le; 10 jours)&lt;br&gt;[Feux verts complets]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-56" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DB2777;strokeWidth=2;fontColor=#9D174D;fontSize=10;fontStyle=1;labelBackgroundColor=#FDF2F8;labelBorderColor=#FBCFE8;" target="FQ5-5dffK3y9o6Z7x8AX-24" value="Oui (&amp;gt; 10 jours)&lt;br&gt;[Règle interne]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-57" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DB2777;strokeWidth=2;fontColor=#9D174D;fontSize=10;fontStyle=1;labelBackgroundColor=#FDF2F8;labelBorderColor=#FBCFE8;" target="FQ5-5dffK3y9o6Z7x8AX-32" value="Demande d&#39;aval N+2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-58" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-32" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#475569;strokeWidth=2;" target="FQ5-5dffK3y9o6Z7x8AX-33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-59" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-33" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#DC2626;strokeWidth=2;fontColor=#991B1B;fontSize=10;fontStyle=1;labelBackgroundColor=#FEF2F2;labelBorderColor=#FCA5A5;" target="FQ5-5dffK3y9o6Z7x8AX-34" value="Refus">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-60" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-33" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-25" value="Accord (Aval N+2 obtenu)&lt;br&gt;[Tous feux verts OK]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-61" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-25" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;dashed=1;dashPattern=4 4;strokeColor=#8B5CF6;strokeWidth=1.5;endArrow=none;" target="FQ5-5dffK3y9o6Z7x8AX-26" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-62" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-25" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-27" value="Congé enregistré&lt;br&gt;en paie">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-63" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-27" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;fontColor=#166534;fontSize=10;fontStyle=1;labelBackgroundColor=#F0FDF4;labelBorderColor=#86EFAC;" target="FQ5-5dffK3y9o6Z7x8AX-15" value="Notification confirmation&lt;br&gt;(Dates validées)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-64" edge="1" parent="1" source="FQ5-5dffK3y9o6Z7x8AX-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;strokeColor=#16A34A;strokeWidth=2;" target="FQ5-5dffK3y9o6Z7x8AX-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FQ5-5dffK3y9o6Z7x8AX-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1.5;fontColor=#334155;align=center;verticalAlign=top;shadow=1;spacingTop=6;spacingLeft=8;spacingRight=8;" value="&lt;b&gt;LÉGENDE DU DIAGRAMME&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align:left; font-size:10px; line-height:1.4;&quot;&gt;🟢 &lt;b&gt;Cercle vert&lt;/b&gt; : Événement Début / Fin positive&lt;br&gt;🔴 &lt;b&gt;Double cercle rouge&lt;/b&gt; : Fin d&amp;#39;interruption / rejet&lt;br&gt;🔶 &lt;b&gt;Losange jaune&lt;/b&gt; : Passerelle de décision / Condition&lt;br&gt;🟦 &lt;b&gt;Rectangle arrondi&lt;/b&gt; : Tâche opérationnelle / Activité&lt;br&gt;🗄️ &lt;b&gt;Cylindre violet&lt;/b&gt; : Données / Système informatique&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="230" x="1820" y="905" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

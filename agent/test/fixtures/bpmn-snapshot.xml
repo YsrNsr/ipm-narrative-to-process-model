@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Exporte par Agent MIP depuis le modele intermediaire de processus (JSON).
+  Transpose fidelement : acteurs (lanes), etapes (taches ; service tasks si
+  automatisees), decisions (passerelles exclusives, flux oui/non, retours),
+  parallelisme d'etage (paire de passerelles paralleles AND split/join),
+  declencheur (start event), chaque terminaison du flux (end events etiquetes),
+  exceptions rattachees a une etape (annotations associees a leur tache),
+  couleurs par type d'element (extension bioc, affichee par bpmn.io/Camunda).
+  Degrade (sans equivalent BPMN direct) : documents, donnees, outils, durees,
+  volumes, frequences, frictions, opportunites, regles metier, exceptions non
+  rattachees et incertitudes -> documentation des elements concernes ; les
+  decisions restent strictement binaires (le MIP l'est par construction) ;
+  pas d'evenement intermediaire ni de message flow ; les marquages de valeurs
+  deduites ne sont pas transposes.
+-->
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_1" targetNamespace="http://agent-mip.local/bpmn">
+  <bpmn:collaboration id="Collab_1"><bpmn:participant id="Pool_1" name="Commande de materiel" processRef="Process_1" /></bpmn:collaboration>
+  <bpmn:process id="Process_1" isExecutable="false">
+    <bpmn:documentation>Regle metier : Au-dela de 500 francs, validation du chef
+Incertitude : En general sous un jour</bpmn:documentation>
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_0" name="Employe">
+        <bpmn:flowNodeRef>Task_s1</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_s4</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GwSplit_c3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>GwJoin_c3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Start_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1" name="Responsable">
+        <bpmn:flowNodeRef>Task_s2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gw_s2</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_s6</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_2" name="Comptabilite">
+        <bpmn:flowNodeRef>Task_s3</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_s5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gw_s5</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_main</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>End_no_s5</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Start_1" name="Un employe veut commander"><bpmn:outgoing>Flow_5</bpmn:outgoing></bpmn:startEvent>
+    <bpmn:task id="Task_s1" name="Envoyer la demande"><bpmn:documentation>Outils : Messagerie
+Duree : 10 min</bpmn:documentation><bpmn:incoming>Flow_5</bpmn:incoming><bpmn:incoming>Flow_12</bpmn:incoming><bpmn:outgoing>Flow_1</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Task_s2" name="Verifier le budget"><bpmn:incoming>Flow_1</bpmn:incoming><bpmn:outgoing>Flow_11</bpmn:outgoing></bpmn:task>
+    <bpmn:exclusiveGateway id="Gw_s2" name="Budget disponible ?"><bpmn:incoming>Flow_11</bpmn:incoming><bpmn:outgoing>Flow_2</bpmn:outgoing><bpmn:outgoing>Flow_12</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:task id="Task_s3" name="Enregistrer l'engagement"><bpmn:incoming>Flow_2</bpmn:incoming><bpmn:outgoing>Flow_3</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Task_s4" name="Confirmer la reception"><bpmn:incoming>Flow_7</bpmn:incoming><bpmn:outgoing>Flow_9</bpmn:outgoing></bpmn:task>
+    <bpmn:task id="Task_s6" name="Classer la decision"><bpmn:incoming>Flow_8</bpmn:incoming><bpmn:outgoing>Flow_10</bpmn:outgoing></bpmn:task>
+    <bpmn:serviceTask id="Task_s5" name="Notifier automatiquement"><bpmn:incoming>Flow_4</bpmn:incoming><bpmn:outgoing>Flow_13</bpmn:outgoing></bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Gw_s5" name="Notification recue ?"><bpmn:incoming>Flow_13</bpmn:incoming><bpmn:outgoing>Flow_6</bpmn:outgoing><bpmn:outgoing>Flow_14</bpmn:outgoing></bpmn:exclusiveGateway>
+    <bpmn:parallelGateway id="GwSplit_c3"><bpmn:incoming>Flow_3</bpmn:incoming><bpmn:outgoing>Flow_7</bpmn:outgoing><bpmn:outgoing>Flow_8</bpmn:outgoing></bpmn:parallelGateway>
+    <bpmn:parallelGateway id="GwJoin_c3"><bpmn:incoming>Flow_9</bpmn:incoming><bpmn:incoming>Flow_10</bpmn:incoming><bpmn:outgoing>Flow_4</bpmn:outgoing></bpmn:parallelGateway>
+    <bpmn:endEvent id="End_main" name="Materiel commande"><bpmn:incoming>Flow_6</bpmn:incoming></bpmn:endEvent>
+    <bpmn:endEvent id="End_no_s5" name="Relancer par mail"><bpmn:incoming>Flow_14</bpmn:incoming></bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1" sourceRef="Task_s1" targetRef="Task_s2"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_2" sourceRef="Gw_s2" targetRef="Task_s3" name="oui"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_3" sourceRef="Task_s3" targetRef="GwSplit_c3"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_4" sourceRef="GwJoin_c3" targetRef="Task_s5"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_5" sourceRef="Start_1" targetRef="Task_s1"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_6" sourceRef="Gw_s5" targetRef="End_main" name="oui"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_7" sourceRef="GwSplit_c3" targetRef="Task_s4"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_8" sourceRef="GwSplit_c3" targetRef="Task_s6"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_9" sourceRef="Task_s4" targetRef="GwJoin_c3"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_s6" targetRef="GwJoin_c3"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_s2" targetRef="Gw_s2"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_12" sourceRef="Gw_s2" targetRef="Task_s1" name="non"><bpmn:documentation>Reduire la demande</bpmn:documentation></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_s5" targetRef="Gw_s5"></bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_14" sourceRef="Gw_s5" targetRef="End_no_s5" name="non"></bpmn:sequenceFlow>
+    <bpmn:textAnnotation id="Ann_0"><bpmn:text>Cas urgent par telephone</bpmn:text></bpmn:textAnnotation>
+    <bpmn:association id="Assoc_0" sourceRef="Task_s3" targetRef="Ann_0" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diag_1"><bpmndi:BPMNPlane id="Plane_1" bpmnElement="Collab_1">
+    <bpmndi:BPMNShape id="Pool_1_di" bpmnElement="Pool_1" isHorizontal="true"><dc:Bounds x="40" y="40" width="1720" height="730" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Lane_0_di" bpmnElement="Lane_0" isHorizontal="true"><dc:Bounds x="70" y="40" width="1690" height="170" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Lane_1_di" bpmnElement="Lane_1" isHorizontal="true"><dc:Bounds x="70" y="210" width="1690" height="170" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Lane_2_di" bpmnElement="Lane_2" isHorizontal="true"><dc:Bounds x="70" y="380" width="1690" height="390" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Task_s1_di" bpmnElement="Task_s1" bioc:stroke="#E0B400" bioc:fill="#FFF6D6"><dc:Bounds x="200" y="70" width="150" height="60" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Task_s2_di" bpmnElement="Task_s2" bioc:stroke="#E0B400" bioc:fill="#FFF6D6"><dc:Bounds x="460" y="240" width="150" height="60" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Gw_s2_di" bpmnElement="Gw_s2" bioc:stroke="#D79B00" bioc:fill="#FFE6CC"><dc:Bounds x="630" y="250" width="40" height="40" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Task_s3_di" bpmnElement="Task_s3" bioc:stroke="#E0B400" bioc:fill="#FFF6D6"><dc:Bounds x="720" y="410" width="150" height="60" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Task_s4_di" bpmnElement="Task_s4" bioc:stroke="#E0B400" bioc:fill="#FFF6D6"><dc:Bounds x="980" y="70" width="150" height="60" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Task_s6_di" bpmnElement="Task_s6" bioc:stroke="#E0B400" bioc:fill="#FFF6D6"><dc:Bounds x="980" y="240" width="150" height="60" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Task_s5_di" bpmnElement="Task_s5" bioc:stroke="#6C8EBF" bioc:fill="#E8F0FE"><dc:Bounds x="1240" y="410" width="150" height="60" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Gw_s5_di" bpmnElement="Gw_s5" bioc:stroke="#D79B00" bioc:fill="#FFE6CC"><dc:Bounds x="1410" y="420" width="40" height="40" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="GwSplit_c3_di" bpmnElement="GwSplit_c3" bioc:stroke="#D79B00" bioc:fill="#FFE6CC"><dc:Bounds x="920" y="80" width="40" height="40" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="GwJoin_c3_di" bpmnElement="GwJoin_c3" bioc:stroke="#D79B00" bioc:fill="#FFE6CC"><dc:Bounds x="1200" y="80" width="40" height="40" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Start_1_di" bpmnElement="Start_1" bioc:stroke="#2F7D4F" bioc:fill="#E4F2E9"><dc:Bounds x="130" y="82" width="36" height="36" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="End_main_di" bpmnElement="End_main" bioc:stroke="#B85450" bioc:fill="#FCE8E6"><dc:Bounds x="1520" y="532" width="36" height="36" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="End_no_s5_di" bpmnElement="End_no_s5" bioc:stroke="#B85450" bioc:fill="#FCE8E6"><dc:Bounds x="1520" y="642" width="36" height="36" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNShape id="Ann_0_di" bpmnElement="Ann_0" bioc:stroke="#9AA0A6" bioc:fill="#F5F5F5"><dc:Bounds x="740" y="478" width="150" height="30" /></bpmndi:BPMNShape>
+    <bpmndi:BPMNEdge id="Flow_1_di" bpmnElement="Flow_1"><di:waypoint x="350" y="100" /><di:waypoint x="460" y="270" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_2_di" bpmnElement="Flow_2"><di:waypoint x="670" y="270" /><di:waypoint x="720" y="440" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_3_di" bpmnElement="Flow_3"><di:waypoint x="870" y="440" /><di:waypoint x="920" y="100" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_4_di" bpmnElement="Flow_4"><di:waypoint x="1240" y="100" /><di:waypoint x="1240" y="440" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_5_di" bpmnElement="Flow_5"><di:waypoint x="166" y="100" /><di:waypoint x="200" y="100" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_6_di" bpmnElement="Flow_6"><di:waypoint x="1450" y="440" /><di:waypoint x="1520" y="550" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_7_di" bpmnElement="Flow_7"><di:waypoint x="960" y="100" /><di:waypoint x="980" y="100" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_8_di" bpmnElement="Flow_8"><di:waypoint x="960" y="100" /><di:waypoint x="980" y="270" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_9_di" bpmnElement="Flow_9"><di:waypoint x="1130" y="100" /><di:waypoint x="1200" y="100" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_10_di" bpmnElement="Flow_10"><di:waypoint x="1130" y="270" /><di:waypoint x="1200" y="100" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_11_di" bpmnElement="Flow_11"><di:waypoint x="610" y="270" /><di:waypoint x="630" y="270" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_12_di" bpmnElement="Flow_12"><di:waypoint x="630" y="270" /><di:waypoint x="350" y="100" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_13_di" bpmnElement="Flow_13"><di:waypoint x="1390" y="440" /><di:waypoint x="1410" y="440" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Flow_14_di" bpmnElement="Flow_14"><di:waypoint x="1450" y="440" /><di:waypoint x="1520" y="660" /></bpmndi:BPMNEdge>
+    <bpmndi:BPMNEdge id="Assoc_0_di" bpmnElement="Assoc_0"><di:waypoint x="870" y="440" /><di:waypoint x="740" y="493" /></bpmndi:BPMNEdge>
+  </bpmndi:BPMNPlane></bpmndi:BPMNDiagram>
+</bpmn:definitions>

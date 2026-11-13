@@ -1,0 +1,37 @@
+{
+  "_comment": "Fixture de reference pour tester score.mjs hors ligne. Chaque categorie de metadonnees contient au moins un element attendu.",
+  "process": "Validation de conge",
+  "actors": ["Employe", "Manager", "RH"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Employe",
+      "label": "Soumettre la demande de conge",
+      "documents_in": [],
+      "documents_out": ["Demande de conge"],
+      "tools": ["Portail RH"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Manager",
+      "label": "Valider la demande",
+      "documents_in": ["Demande de conge"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "2 jours",
+      "friction": "Validations souvent tardives"
+    },
+    {
+      "id": "s3",
+      "actor": "RH",
+      "label": "Enregistrer le conge",
+      "documents_in": [],
+      "documents_out": ["Attestation"],
+      "tools": ["SIRH"],
+      "duration": "",
+      "friction": ""
+    }
+  ]
+}

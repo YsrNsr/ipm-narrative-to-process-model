@@ -1,0 +1,18 @@
+English translation of free_generation_prompt.fr.txt (motivating experiment, Section 4 of the paper).
+The French original is the prompt that was actually submitted, followed by the leave request narrative.
+
+Mission
+The text below is the first-person account of a person explaining how they handle a situation in their work. The text is not structured: it does not list the actors, does not explicitly name the steps, and may mix the chronological order with digressions, special cases or flashbacks in the narrative.
+From this text, you must:
+- identify the actors involved yourself, even if they are only designated implicitly or indirectly;
+- reconstruct the actual steps of the process and their logical order, independently of the order in which they are told;
+- identify the decisions, conditions and possible branches, even if they are not formulated as explicit choices;
+- identify the transfers of information or objects between actors;
+- identify the trigger of the process and its final outcome(s).
+Do not invent any information absent from the text. If an element is ambiguous, choose the most reasonable interpretation and stay consistent with it throughout the diagram.
+Modelling
+Choose yourself the graphical representation best suited to this process. Clearly distinguish the identified actors. Represent the activities, the decisions, the flows, as well as the start and the end of the process.
+Output format
+Provide a file that can be directly imported and edited in Draw.io / diagrams.net (.drawio or valid .xml). Do not provide a textual description only.
+Narrative to analyse:
+[leave request narrative, see ../motivating-experiment/leave_request_narrative.fr.txt]

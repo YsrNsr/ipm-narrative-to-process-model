@@ -1,0 +1,19 @@
+Mission
+Le texte ci-dessous est le récit, à la première personne, d'une personne qui explique comment elle gère une situation dans son travail. Le texte n'est pas structuré : il ne liste pas les acteurs, ne nomme pas explicitement les étapes, et peut mélanger l'ordre chronologique avec des digressions, des cas particuliers ou des retours en arrière dans le récit.
+À partir de ce texte, tu dois :
+- identifier toi-même les acteurs impliqués, même s'ils ne sont désignés que de manière implicite ou indirecte ;
+- reconstruire les étapes réelles du processus et leur ordre logique, indépendamment de l'ordre dans lequel elles sont racontées ;
+- identifier les décisions, conditions et branches éventuelles, même si elles ne sont pas formulées comme des choix explicites ;
+- identifier les transferts d'information ou d'objet entre acteurs ;
+- identifier le déclencheur du processus et son (ou ses) issue(s) finale(s).
+N'invente aucune information absente du texte. Si un élément est ambigu, choisis l'interprétation la plus raisonnable et reste cohérent avec elle sur l'ensemble du diagramme.
+Modélisation
+Choisis toi-même la représentation graphique la plus adaptée à ce processus. Distingue clairement les acteurs identifiés. Représente les activités, les décisions, les flux, ainsi que le début et la fin du processus.
+Format de sortie
+Fournis un fichier directement importable et modifiable dans Draw.io / diagrams.net (.drawio ou .xml valide). Ne fournis pas de description textuelle seule.
+Récit à analyser :
+Alors en général ça commence quand un collaborateur m'envoie un message pour me dire qu'il aimerait poser des congés. Des fois c'est juste deux jours, des fois c'est trois semaines d'affilée, ça dépend vraiment. Bon, avant de faire quoi que ce soit je vais regarder son solde, parce que ça m'est déjà arrivé de valider un truc et de me rendre compte après coup que la personne n'avait plus assez de jours, donc maintenant je vérifie toujours en premier.
+Si le solde ne suffit pas, je lui dis directement que ça ne passera pas comme ça, et là soit il retire sa demande, soit on discute d'un arrangement, genre un congé sans solde, mais ça il faut que ce soit validé par la direction, ce n'est pas moi qui décide de ça.
+Si le solde est bon, normalement je transmets la demande au responsable direct de la personne, c'est lui qui doit donner son feu vert parce qu'il connaît la charge de travail de l'équipe. Des fois il valide tout de suite, des fois il me dit d'attendre parce qu'il y a un projet en cours et qu'il ne peut pas se permettre d'avoir quelqu'un d'absent à ce moment-là. Dans ce cas la demande reste en attente et j'en reparle avec le collaborateur pour voir s'il peut décaler ses dates.
+Une fois que le responsable a dit oui, il y a un cas particulier : si la demande dépasse dix jours consécutifs, il faut en plus l'aval du n+2, donc du responsable du responsable en quelque sorte, sinon ça ne passe pas, peu importe ce que dit le manager direct. C'est une règle interne, je ne sais pas trop pourquoi mais c'est comme ça.
+Une fois que j'ai tous les feux verts nécessaires, j'enregistre le congé dans le système de paie pour que ça soit pris en compte sur le bulletin de salaire, et j'envoie une confirmation au collaborateur avec les dates validées. Et voilà, c'est terminé, sauf si entre-temps il change d'avis, mais ça c'est un autre sujet.

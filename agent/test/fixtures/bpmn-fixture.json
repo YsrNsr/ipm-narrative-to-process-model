@@ -1,0 +1,291 @@
+{
+  "process": "Commande de materiel",
+  "trigger": "Un employe veut commander",
+  "outcome": "Materiel commande",
+  "actors": [
+    "Employe",
+    "Responsable",
+    "Comptabilite"
+  ],
+  "inferredProcess": {
+    "rules": [
+      false
+    ],
+    "uncertainties": [
+      false
+    ],
+    "exceptions": [
+      false
+    ]
+  },
+  "rules": [
+    "Au-dela de 500 francs, validation du chef"
+  ],
+  "uncertainties": [
+    "En general sous un jour"
+  ],
+  "exceptions": [
+    {
+      "text": "Cas urgent par telephone",
+      "step_id": "s3"
+    }
+  ],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Employe",
+      "actors": [
+        "Employe"
+      ],
+      "stage": 1,
+      "stage_given": true,
+      "label": "Envoyer la demande",
+      "documents_in": [],
+      "documents_out": [],
+      "data_in": [],
+      "data_out": [],
+      "tools": [
+        "Messagerie"
+      ],
+      "duration": "10 min",
+      "duration_min": "",
+      "duration_max": "",
+      "volume": "",
+      "frequency": "",
+      "friction": "",
+      "procedure": "",
+      "opportunity": "",
+      "automated": false,
+      "decision": null,
+      "inferred": {
+        "documents_in": [],
+        "documents_out": [],
+        "data_in": [],
+        "data_out": [],
+        "tools": [
+          false
+        ],
+        "duration": false,
+        "duration_min": false,
+        "duration_max": false,
+        "volume": false,
+        "frequency": false,
+        "friction": false,
+        "procedure": false,
+        "opportunity": false
+      }
+    },
+    {
+      "id": "s2",
+      "actor": "Responsable",
+      "actors": [
+        "Responsable"
+      ],
+      "stage": 2,
+      "stage_given": true,
+      "label": "Verifier le budget",
+      "documents_in": [],
+      "documents_out": [],
+      "data_in": [],
+      "data_out": [],
+      "tools": [],
+      "duration": "",
+      "duration_min": "",
+      "duration_max": "",
+      "volume": "",
+      "frequency": "",
+      "friction": "",
+      "procedure": "",
+      "opportunity": "",
+      "automated": false,
+      "decision": {
+        "question": "Budget disponible ?",
+        "on_no": {
+          "label": "Reduire la demande",
+          "return_to": "s1"
+        }
+      },
+      "inferred": {
+        "documents_in": [],
+        "documents_out": [],
+        "data_in": [],
+        "data_out": [],
+        "tools": [],
+        "duration": false,
+        "duration_min": false,
+        "duration_max": false,
+        "volume": false,
+        "frequency": false,
+        "friction": false,
+        "procedure": false,
+        "opportunity": false
+      }
+    },
+    {
+      "id": "s3",
+      "actor": "Comptabilite",
+      "actors": [
+        "Comptabilite"
+      ],
+      "stage": 3,
+      "stage_given": true,
+      "label": "Enregistrer l'engagement",
+      "documents_in": [],
+      "documents_out": [],
+      "data_in": [],
+      "data_out": [],
+      "tools": [],
+      "duration": "",
+      "duration_min": "",
+      "duration_max": "",
+      "volume": "",
+      "frequency": "",
+      "friction": "",
+      "procedure": "",
+      "opportunity": "",
+      "automated": false,
+      "decision": null,
+      "inferred": {
+        "documents_in": [],
+        "documents_out": [],
+        "data_in": [],
+        "data_out": [],
+        "tools": [],
+        "duration": false,
+        "duration_min": false,
+        "duration_max": false,
+        "volume": false,
+        "frequency": false,
+        "friction": false,
+        "procedure": false,
+        "opportunity": false
+      }
+    },
+    {
+      "id": "s4",
+      "actor": "Employe",
+      "actors": [
+        "Employe"
+      ],
+      "stage": 4,
+      "stage_given": true,
+      "label": "Confirmer la reception",
+      "documents_in": [],
+      "documents_out": [],
+      "data_in": [],
+      "data_out": [],
+      "tools": [],
+      "duration": "",
+      "duration_min": "",
+      "duration_max": "",
+      "volume": "",
+      "frequency": "",
+      "friction": "",
+      "procedure": "",
+      "opportunity": "",
+      "automated": false,
+      "decision": null,
+      "inferred": {
+        "documents_in": [],
+        "documents_out": [],
+        "data_in": [],
+        "data_out": [],
+        "tools": [],
+        "duration": false,
+        "duration_min": false,
+        "duration_max": false,
+        "volume": false,
+        "frequency": false,
+        "friction": false,
+        "procedure": false,
+        "opportunity": false
+      }
+    },
+    {
+      "id": "s6",
+      "actor": "Responsable",
+      "actors": [
+        "Responsable"
+      ],
+      "stage": 4,
+      "stage_given": true,
+      "label": "Classer la decision",
+      "documents_in": [],
+      "documents_out": [],
+      "data_in": [],
+      "data_out": [],
+      "tools": [],
+      "duration": "",
+      "duration_min": "",
+      "duration_max": "",
+      "volume": "",
+      "frequency": "",
+      "friction": "",
+      "procedure": "",
+      "opportunity": "",
+      "automated": false,
+      "decision": null,
+      "inferred": {
+        "documents_in": [],
+        "documents_out": [],
+        "data_in": [],
+        "data_out": [],
+        "tools": [],
+        "duration": false,
+        "duration_min": false,
+        "duration_max": false,
+        "volume": false,
+        "frequency": false,
+        "friction": false,
+        "procedure": false,
+        "opportunity": false
+      }
+    },
+    {
+      "id": "s5",
+      "actor": "Comptabilite",
+      "actors": [
+        "Comptabilite"
+      ],
+      "stage": 5,
+      "stage_given": true,
+      "label": "Notifier automatiquement",
+      "documents_in": [],
+      "documents_out": [],
+      "data_in": [],
+      "data_out": [],
+      "tools": [],
+      "duration": "",
+      "duration_min": "",
+      "duration_max": "",
+      "volume": "",
+      "frequency": "",
+      "friction": "",
+      "procedure": "",
+      "opportunity": "",
+      "automated": true,
+      "decision": {
+        "question": "Notification recue ?",
+        "on_no": {
+          "label": "Relancer par mail",
+          "return_to": "fin"
+        }
+      },
+      "inferred": {
+        "documents_in": [],
+        "documents_out": [],
+        "data_in": [],
+        "data_out": [],
+        "tools": [],
+        "duration": false,
+        "duration_min": false,
+        "duration_max": false,
+        "volume": false,
+        "frequency": false,
+        "friction": false,
+        "procedure": false,
+        "opportunity": false
+      }
+    }
+  ]
+}

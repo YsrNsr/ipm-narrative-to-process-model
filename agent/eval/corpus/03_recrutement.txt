@@ -1,0 +1,31 @@
+# Cas 03 : recrutement d'un collaborateur. Synthetique. Longueur moyenne, recit desordonne avec retours en arriere.
+
+Interlocuteur 1 (00:00)
+Alors comment dire, le recrutement chez nous c'est un peu particulier. Le plus pénible c'est les entretiens, on n'arrive jamais à caler les agendas, il faut compter deux semaines rien que pour ça.
+
+Interlocuteur 2 (00:12)
+Attendez, on peut reprendre depuis le début ?
+
+Interlocuteur 1 (00:15)
+Oui pardon. Au départ il y a le responsable de service qui a besoin de quelqu'un. Il remplit une demande d'ouverture de poste, c'est un formulaire dans l'intranet.
+
+Interlocuteur 2 (00:26)
+Et ça part où ?
+
+Interlocuteur 1 (00:27)
+Aux ressources humaines. Enfin non, pas tout de suite. D'abord ça passe par la direction financière qui doit valider le budget. Ça, ça met une semaine, parfois plus si on tombe en période de clôture. C'est vraiment le point qui bloque le plus souvent.
+
+Interlocuteur 1 (00:42)
+Une fois que le budget est validé, là les ressources humaines rédigent l'annonce et la publient sur les sites d'emploi. Ils utilisent l'outil de recrutement, le fameux ATS.
+
+Interlocuteur 2 (00:54)
+Et le tri des candidatures ?
+
+Interlocuteur 1 (00:56)
+Les ressources humaines font un premier tri dans l'ATS, ils écartent tout ce qui ne correspond pas au profil, et ils transmettent une liste courte au responsable de service. Trois jours en général.
+
+Interlocuteur 1 (01:08)
+Après il y a les entretiens dont je vous parlais. C'est le responsable de service qui les mène, avec quelqu'un des ressources humaines. Deux semaines à cause des agendas.
+
+Interlocuteur 1 (01:19)
+Et pour finir les ressources humaines établissent le contrat et l'envoient au candidat retenu. Ah, et j'oubliais, avant le contrat il y a la prise de références, c'est le responsable qui appelle les anciens employeurs. Ça se fait juste après les entretiens.

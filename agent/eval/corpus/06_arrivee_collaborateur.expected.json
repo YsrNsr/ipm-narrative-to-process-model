@@ -1,0 +1,87 @@
+{
+  "_note": "Reference annotee selon REGLES_ANNOTATION_CORPUS.md. Cas a six acteurs. La fourniture des documents personnels par le collaborateur est mentionnee en fin d'entretien mais se situe avant l'entree (R4). Le remplacement du manager par un collegue est annote en friction et non comme acteur, faute de designation stable dans le texte.",
+  "process": "Arrivee d'un nouveau collaborateur",
+  "actors": ["Ressources humaines", "Informatique", "Services generaux", "Manager", "Collaborateur"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Ressources humaines",
+      "label": "Creer le dossier du collaborateur et diffuser la fiche d'arrivee",
+      "documents_in": ["Contrat"],
+      "documents_out": ["Fiche d'arrivee"],
+      "tools": ["Systeme de paie"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Collaborateur",
+      "label": "Fournir les documents personnels",
+      "documents_in": [],
+      "documents_out": ["Attestation d'assurance", "Coordonnees bancaires"],
+      "tools": [],
+      "duration": "",
+      "friction": "Paie bloquee sans ces documents"
+    },
+    {
+      "id": "s3",
+      "actor": "Informatique",
+      "label": "Creer le compte utilisateur et preparer le poste de travail",
+      "documents_in": ["Fiche d'arrivee"],
+      "documents_out": [],
+      "tools": ["Outil de gestion de parc"],
+      "duration": "1 semaine",
+      "friction": "Delai de prevenance trop court, materiel indisponible a l'arrivee"
+    },
+    {
+      "id": "s4",
+      "actor": "Services generaux",
+      "label": "Preparer le badge d'acces et attribuer une place",
+      "documents_in": ["Fiche d'arrivee"],
+      "documents_out": ["Badge d'acces"],
+      "tools": [],
+      "duration": "2 jours",
+      "friction": ""
+    },
+    {
+      "id": "s5",
+      "actor": "Manager",
+      "label": "Accueillir le collaborateur et remettre le livret d'accueil",
+      "documents_in": [],
+      "documents_out": ["Livret d'accueil"],
+      "tools": [],
+      "duration": "",
+      "friction": "Accueil degrade si le manager est en deplacement"
+    },
+    {
+      "id": "s6",
+      "actor": "Ressources humaines",
+      "label": "Animer la session d'integration",
+      "documents_in": [],
+      "documents_out": [],
+      "tools": [],
+      "duration": "une demi-journee",
+      "friction": "Session mensuelle, attente pouvant aller jusqu'a trois semaines"
+    },
+    {
+      "id": "s7",
+      "actor": "Manager",
+      "label": "Rediger le bilan de periode d'essai",
+      "documents_in": [],
+      "documents_out": ["Bilan de periode d'essai"],
+      "tools": ["Outil d'evaluation"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s8",
+      "actor": "Ressources humaines",
+      "label": "Confirmer l'engagement",
+      "documents_in": ["Bilan de periode d'essai"],
+      "documents_out": [],
+      "tools": ["Outil d'evaluation"],
+      "duration": "",
+      "friction": ""
+    }
+  ]
+}

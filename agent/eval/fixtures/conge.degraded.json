@@ -1,0 +1,37 @@
+{
+  "_comment": "Generation degradee fabriquee : acteur hallucine (Comptabilite), acteur renomme (Service RH), libelle raccourci, document abrege, outil et duree et friction manques, tache reattribuee. Metriques attendues calculees a la main dans test/score.mjs.",
+  "process": "Validation de conge",
+  "actors": ["Employe", "Manager", "Service RH", "Comptabilite"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Employe",
+      "label": "Soumettre la demande",
+      "documents_in": [],
+      "documents_out": ["Demande"],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Manager",
+      "label": "Valider la demande",
+      "documents_in": [],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s3",
+      "actor": "Comptabilite",
+      "label": "Enregistrer le conge",
+      "documents_in": [],
+      "documents_out": ["Attestation"],
+      "tools": ["SIRH"],
+      "duration": "",
+      "friction": ""
+    }
+  ]
+}

@@ -1,0 +1,681 @@
+{
+  "generatedAt": "2026-08-21T17:05:27.853Z",
+  "provider": "anthropic",
+  "model": "claude-opus-5",
+  "promptVersion": "7",
+  "threshold": 0.4,
+  "results": [
+    {
+      "id": "02_commande_livraison",
+      "kind": "corpus",
+      "baseId": "02_commande_livraison",
+      "fromCache": false,
+      "latencyMs": 16632,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 7,
+            "recalled": 4,
+            "recall": 0.5714285714285714
+          },
+          "outils": {
+            "expected": 6,
+            "recalled": 4,
+            "recall": 0.6666666666666666
+          },
+          "temps": {
+            "expected": 4,
+            "recalled": 2,
+            "recall": 0.5
+          },
+          "frictions": {
+            "expected": 3,
+            "recalled": 1,
+            "recall": 0.3333333333333333
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 1,
+            "removed": 1,
+            "renamed": 2,
+            "reassigned": 1
+          },
+          "metadata": {
+            "added": 2,
+            "removed": 6,
+            "renamed": 4
+          },
+          "total": 17
+        },
+        "coverage": {
+          "actors": {
+            "matched": 5,
+            "generated": 5,
+            "expected": 5,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 5,
+            "generated": 6,
+            "expected": 6,
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1": 0.8333333333333334
+          }
+        },
+        "attachment": {
+          "correct": 4,
+          "pairs": 5,
+          "accuracy": 0.8
+        },
+        "granularity": {
+          "generatedSteps": 6,
+          "expectedSteps": 6,
+          "ratio": 1
+        },
+        "inferred": {
+          "documents": 1,
+          "donnees": 0,
+          "outils": 0,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 0,
+          "procedure": 0,
+          "opportunites": 0,
+          "total": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "03_recrutement",
+      "kind": "corpus",
+      "baseId": "03_recrutement",
+      "fromCache": false,
+      "latencyMs": 22180,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 7,
+            "recalled": 7,
+            "recall": 1
+          },
+          "outils": {
+            "expected": 3,
+            "recalled": 1,
+            "recall": 0.3333333333333333
+          },
+          "temps": {
+            "expected": 3,
+            "recalled": 3,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 2,
+            "recalled": 1,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 1,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 2,
+            "removed": 4,
+            "renamed": 2
+          },
+          "total": 9
+        },
+        "coverage": {
+          "actors": {
+            "matched": 3,
+            "generated": 3,
+            "expected": 3,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 7,
+            "generated": 7,
+            "expected": 7,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "attachment": {
+          "correct": 7,
+          "pairs": 7,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 7,
+          "expectedSteps": 7,
+          "ratio": 1
+        },
+        "inferred": {
+          "documents": 0,
+          "donnees": 1,
+          "outils": 0,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 0,
+          "procedure": 0,
+          "opportunites": 0,
+          "total": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "04_note_de_frais",
+      "kind": "corpus",
+      "baseId": "04_note_de_frais",
+      "fromCache": false,
+      "latencyMs": 12268,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 4,
+            "recalled": 3,
+            "recall": 0.75
+          },
+          "outils": {
+            "expected": 0,
+            "recalled": 0,
+            "recall": null
+          },
+          "temps": {
+            "expected": 1,
+            "recalled": 0,
+            "recall": 0
+          },
+          "frictions": {
+            "expected": 2,
+            "recalled": 1,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 3,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 3,
+            "removed": 3,
+            "renamed": 1
+          },
+          "total": 10
+        },
+        "coverage": {
+          "actors": {
+            "matched": 3,
+            "generated": 3,
+            "expected": 3,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 4,
+            "generated": 4,
+            "expected": 4,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "attachment": {
+          "correct": 4,
+          "pairs": 4,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 4,
+          "expectedSteps": 4,
+          "ratio": 1
+        },
+        "inferred": {
+          "documents": 0,
+          "donnees": 1,
+          "outils": 0,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 0,
+          "procedure": 0,
+          "opportunites": 0,
+          "total": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "05_intervention_panne",
+      "kind": "corpus",
+      "baseId": "05_intervention_panne",
+      "fromCache": false,
+      "latencyMs": 33966,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 7,
+            "recalled": 7,
+            "recall": 1
+          },
+          "outils": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 3,
+            "recalled": 2,
+            "recall": 0.6666666666666666
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 1,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 1,
+            "renamed": 3,
+            "reassigned": 1
+          },
+          "metadata": {
+            "added": 1,
+            "removed": 2,
+            "renamed": 8
+          },
+          "total": 17
+        },
+        "coverage": {
+          "actors": {
+            "matched": 5,
+            "generated": 6,
+            "expected": 5,
+            "precision": 0.8333333333333334,
+            "recall": 1,
+            "f1": 0.9090909090909091
+          },
+          "tasks": {
+            "matched": 8,
+            "generated": 9,
+            "expected": 8,
+            "precision": 0.8888888888888888,
+            "recall": 1,
+            "f1": 0.9411764705882353
+          }
+        },
+        "attachment": {
+          "correct": 7,
+          "pairs": 8,
+          "accuracy": 0.875
+        },
+        "granularity": {
+          "generatedSteps": 9,
+          "expectedSteps": 8,
+          "ratio": 1.125
+        },
+        "inferred": {
+          "documents": 0,
+          "donnees": 2,
+          "outils": 1,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 0,
+          "procedure": 0,
+          "opportunites": 0,
+          "total": 3
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "06_arrivee_collaborateur",
+      "kind": "corpus",
+      "baseId": "06_arrivee_collaborateur",
+      "fromCache": false,
+      "latencyMs": 38285,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 10,
+            "recalled": 7,
+            "recall": 0.7
+          },
+          "outils": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 3,
+            "recalled": 3,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 4,
+            "recalled": 2,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 1
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 1,
+            "renamed": 5,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 5,
+            "removed": 1,
+            "renamed": 4
+          },
+          "total": 17
+        },
+        "coverage": {
+          "actors": {
+            "matched": 5,
+            "generated": 5,
+            "expected": 5,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 8,
+            "generated": 9,
+            "expected": 8,
+            "precision": 0.8888888888888888,
+            "recall": 1,
+            "f1": 0.9411764705882353
+          }
+        },
+        "attachment": {
+          "correct": 8,
+          "pairs": 8,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 9,
+          "expectedSteps": 8,
+          "ratio": 1.125
+        },
+        "inferred": {
+          "documents": 0,
+          "donnees": 3,
+          "outils": 0,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 0,
+          "procedure": 0,
+          "opportunites": 0,
+          "total": 3
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "01_raccordement",
+      "kind": "corpus",
+      "baseId": "01_raccordement",
+      "fromCache": false,
+      "latencyMs": 26387,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 6,
+            "recalled": 5,
+            "recall": 0.8333333333333334
+          },
+          "outils": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 1,
+            "recalled": 1,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 2,
+            "recalled": 1,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 1,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 4,
+            "removed": 4,
+            "renamed": 3
+          },
+          "total": 12
+        },
+        "coverage": {
+          "actors": {
+            "matched": 4,
+            "generated": 4,
+            "expected": 4,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 6,
+            "generated": 6,
+            "expected": 6,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "attachment": {
+          "correct": 6,
+          "pairs": 6,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 6,
+          "expectedSteps": 6,
+          "ratio": 1
+        },
+        "inferred": {
+          "documents": 2,
+          "donnees": 0,
+          "outils": 1,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 0,
+          "procedure": 0,
+          "opportunites": 0,
+          "total": 3
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "01_raccordement.para1",
+      "kind": "paraphrase",
+      "baseId": "01_raccordement",
+      "fromCache": false,
+      "latencyMs": 20319,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 6,
+            "recalled": 3,
+            "recall": 0.5
+          },
+          "outils": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 1,
+            "recalled": 1,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 2,
+            "recalled": 1,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 4,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 4,
+            "removed": 0,
+            "renamed": 3
+          },
+          "total": 11
+        },
+        "coverage": {
+          "actors": {
+            "matched": 4,
+            "generated": 4,
+            "expected": 4,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 6,
+            "generated": 6,
+            "expected": 6,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "attachment": {
+          "correct": 6,
+          "pairs": 6,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 6,
+          "expectedSteps": 6,
+          "ratio": 1
+        },
+        "inferred": {
+          "documents": 6,
+          "donnees": 0,
+          "outils": 0,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 0,
+          "procedure": 1,
+          "opportunites": 0,
+          "total": 7
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "07_real_interview",
+      "kind": "corpus",
+      "baseId": "07_real_interview",
+      "failed": "Sortie Anthropic tronquee (max_tokens atteint) : augmenter max_tokens.",
+      "latencyMs": 99611
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+agent/logs/
+agent/sessions/
+agent/.trash/
+agent/eval/cache/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

@@ -1,0 +1,67 @@
+{
+  "_note": "Reference annotee selon REGLES_ANNOTATION_CORPUS.md. Acteur 'Technicien' verbatim (R2), etape de transmission conservee (R3, cas des transferts).",
+  "process": "Traitement d'une demande de raccordement",
+  "actors": ["Client", "Service clientele", "Bureau technique", "Technicien"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Client",
+      "label": "Remplir le formulaire de demande",
+      "documents_in": [],
+      "documents_out": ["Demande de raccordement"],
+      "tools": ["Portail web"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Service clientele",
+      "label": "Recuperer et verifier le dossier",
+      "documents_in": ["Demande de raccordement"],
+      "documents_out": ["Dossier valide"],
+      "tools": ["CRM"],
+      "duration": "",
+      "friction": "Pieces justificatives manquantes"
+    },
+    {
+      "id": "s3",
+      "actor": "Service clientele",
+      "label": "Transmettre le dossier au bureau technique",
+      "documents_in": ["Dossier valide"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s4",
+      "actor": "Bureau technique",
+      "label": "Etudier la faisabilite",
+      "documents_in": ["Dossier valide"],
+      "documents_out": [],
+      "tools": ["SIG"],
+      "duration": "5 jours",
+      "friction": ""
+    },
+    {
+      "id": "s5",
+      "actor": "Technicien",
+      "label": "Realiser le raccordement",
+      "documents_in": [],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": "Acces au site necessaire"
+    },
+    {
+      "id": "s6",
+      "actor": "Service clientele",
+      "label": "Cloturer le dossier et emettre la facture",
+      "documents_in": [],
+      "documents_out": ["Facture"],
+      "tools": ["ERP"],
+      "duration": "",
+      "friction": ""
+    }
+  ]
+}

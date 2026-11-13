@@ -1,0 +1,262 @@
+{
+  "generatedAt": "2026-07-26T18:28:16.721Z",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "threshold": 0.4,
+  "totalDocs": 45,
+  "gatewayDocs": 37,
+  "results": [
+    {
+      "doc": "doc-10.1",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 6285,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 2,
+        "generated": 2
+      },
+      "activities": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285715,
+        "gold": 4,
+        "generated": 3
+      }
+    },
+    {
+      "doc": "doc-10.12",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 4259,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 3,
+        "generated": 3
+      },
+      "activities": {
+        "precision": 1,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "gold": 5,
+        "generated": 4
+      }
+    },
+    {
+      "doc": "doc-1.2",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 6522,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "gold": 3,
+        "generated": 2
+      },
+      "activities": {
+        "precision": 1,
+        "recall": 0.5555555555555556,
+        "f1": 0.7142857142857143,
+        "gold": 9,
+        "generated": 8
+      }
+    },
+    {
+      "doc": "doc-10.2",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 11230,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 5,
+        "generated": 5
+      },
+      "activities": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 8,
+        "generated": 13
+      }
+    },
+    {
+      "doc": "doc-1.4",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 7215,
+      "fromCache": true,
+      "actors": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285715,
+        "gold": 4,
+        "generated": 3
+      },
+      "activities": {
+        "precision": 0.6,
+        "recall": 0.5454545454545454,
+        "f1": 0.5714285714285713,
+        "gold": 11,
+        "generated": 10
+      }
+    },
+    {
+      "doc": "doc-3.8",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 5755,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "gold": 5,
+        "generated": 3
+      },
+      "activities": {
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "gold": 9,
+        "generated": 8
+      }
+    },
+    {
+      "doc": "doc-10.4",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 7875,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "gold": 5,
+        "generated": 4
+      },
+      "activities": {
+        "precision": 0.7777777777777778,
+        "recall": 0.6666666666666666,
+        "f1": 0.717948717948718,
+        "gold": 9,
+        "generated": 9
+      }
+    },
+    {
+      "doc": "doc-10.7",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 4681,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 5,
+        "generated": 5
+      },
+      "activities": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 6,
+        "generated": 7
+      }
+    },
+    {
+      "doc": "doc-9.1",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 9410,
+      "fromCache": true,
+      "actors": {
+        "precision": 0.5,
+        "recall": 1,
+        "f1": 0.6666666666666666,
+        "gold": 3,
+        "generated": 4
+      },
+      "activities": {
+        "precision": 0.75,
+        "recall": 0.625,
+        "f1": 0.6818181818181818,
+        "gold": 8,
+        "generated": 8
+      }
+    },
+    {
+      "doc": "doc-10.13",
+      "hasGateway": false,
+      "usable": true,
+      "latencyMs": 2982,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 2,
+        "generated": 2
+      },
+      "activities": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 3,
+        "generated": 3
+      }
+    },
+    {
+      "doc": "doc-8.1",
+      "hasGateway": false,
+      "usable": true,
+      "latencyMs": 3734,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "gold": 2,
+        "generated": 3
+      },
+      "activities": {
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1": 0.4000000000000001,
+        "gold": 5,
+        "generated": 5
+      }
+    },
+    {
+      "doc": "doc-2.1",
+      "hasGateway": true,
+      "usable": true,
+      "latencyMs": 20084,
+      "fromCache": true,
+      "actors": {
+        "precision": 1,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "gold": 12,
+        "generated": 6
+      },
+      "activities": {
+        "precision": 0.5483870967741935,
+        "recall": 0.3333333333333333,
+        "f1": 0.4146341463414634,
+        "gold": 27,
+        "generated": 31
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-07-26T16:52:11.104Z",
+  "provider": "ollama",
+  "model": "mistral",
+  "promptVersion": "2",
+  "threshold": 0.4,
+  "results": [
+    {
+      "id": "01_raccordement",
+      "kind": "corpus",
+      "baseId": "01_raccordement",
+      "fromCache": false,
+      "latencyMs": 830707,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 6,
+            "recalled": 4,
+            "recall": 0.6666666666666666
+          },
+          "outils": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 1,
+            "recalled": 1,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 2,
+            "recalled": 2,
+            "recall": 1
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 3,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 4,
+            "removed": 2,
+            "renamed": 2
+          },
+          "total": 11
+        },
+        "coverage": {
+          "actors": {
+            "matched": 4,
+            "generated": 4,
+            "expected": 4,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 6,
+            "generated": 6,
+            "expected": 6,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "attachment": {
+          "correct": 6,
+          "pairs": 6,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 6,
+          "expectedSteps": 6,
+          "ratio": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    }
+  ]
+}

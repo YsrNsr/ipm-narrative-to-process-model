@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Agent MIP</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232E4E8F'/%3E%3Cpath d='M6 22V10h4l3 6 3-6h4v12h-3v-7l-3 6h-2l-3-6v7z' fill='white'/%3E%3C/svg%3E"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>Agent MIP</h1>
+      <p>L'IA structure, le métier valide, l'analyste formalise</p>
+    </div>
+    <div class="topbar-right">
+      <span id="model-badge" class="badge badge-model hidden" title="Modèle actif du fournisseur sélectionné"></span>
+      <span id="provider-badge" class="badge badge-local" title="Où partent les données pendant la génération">local : les données ne quittent pas la machine</span>
+      <button id="btn-sessions" class="ghost" aria-haspopup="dialog">Historique</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Panneau gauche : entree et options -->
+    <section id="left-panel" class="side-panel" aria-label="Entrée et options">
+      <div class="panel-scroll">
+        <div class="field">
+          <div class="field-head">
+            <label>Entretiens</label>
+            <button id="btn-add-interview" class="ghost small" title="Ajouter un entretien">+ Ajouter</button>
+          </div>
+          <p class="hint">Collez un récit, ou déposez un fichier .txt ou .md sur un bloc. Un texte contenant « === ENTRETIEN === » est découpé automatiquement.</p>
+          <div id="interviews"></div>
+          <button id="btn-example" class="ghost small">Charger l'exemple : demande de congés</button>
+        </div>
+
+        <div class="field">
+          <label for="provider">Fournisseur</label>
+          <select id="provider">
+            <option value="ollama">Ollama (local)</option>
+            <option value="anthropic">Anthropic (cloud)</option>
+            <option value="openai">OpenAI (cloud)</option>
+          </select>
+          <label for="model" class="sub-label">Modèle</label>
+          <select id="model" title="Modèle de génération du fournisseur sélectionné"></select>
+        </div>
+
+        <div id="anonymize-box" class="field hidden">
+          <div class="field-head">
+            <label>Anonymisation avant envoi cloud</label>
+            <button id="btn-anonymize" class="ghost small">Analyser les textes</button>
+          </div>
+          <p class="hint">Détection locale (aucun envoi réseau) de candidats : noms répétés, adresses mail, téléphones. C'est une aide, pas une garantie — relisez avant d'envoyer.</p>
+          <ul id="anonymize-list" class="anonymize-list"></ul>
+        </div>
+
+        <div class="field">
+          <label>Pages du fichier Draw.io</label>
+          <div class="outputs" id="outputs-pages">
+            <label class="check"><input type="checkbox" id="page-maki"/> Grille MIP (la référence)</label>
+            <label class="check"><input type="checkbox" id="page-proc"/> Modèle de processus seul (sans métadonnées)</label>
+            <label class="check"><input type="checkbox" id="page-bpmn"/> BPMN <span class="badge-exp">expérimental</span></label>
+            <label class="check"><input type="checkbox" id="page-raci"/> Matrice de responsabilités</label>
+            <label class="check"><input type="checkbox" id="page-sipoc"/> SIPOC</label>
+            <label class="check"><input type="checkbox" id="page-ana"/> Analyse (préparation d'atelier)</label>
+          </div>
+          <p id="pages-hint" class="hint hidden">Cochez au moins une page : le fichier généré ne peut pas être vide.</p>
+        </div>
+
+        <div class="field">
+          <label>Fichiers à télécharger</label>
+          <div class="outputs" id="outputs">
+            <label class="check"><input type="checkbox" id="out-md"/> Fiche processus (.md)</label>
+            <label class="check"><input type="checkbox" id="out-csv"/> Tableau (.csv)</label>
+            <label class="check"><input type="checkbox" id="out-validation"/> Liste de validation (.md)</label>
+            <label class="check"><input type="checkbox" id="out-questions"/> Questions d'entretien (.md)</label>
+            <label class="check"><input type="checkbox" id="out-bpmn"/> BPMN pour import dans un autre outil (.bpmn)</label>
+            <label class="check"><input type="checkbox" id="out-json"/> Modèle extrait (.json)</label>
+          </div>
+        </div>
+
+        <button id="gen" class="primary">Générer la grille MIP</button>
+
+        <div id="png-row" class="row hidden">
+          <select id="png-page" title="Page à exporter en PNG"></select>
+          <button id="btn-png" class="ghost small">Exporter cette page en PNG</button>
+        </div>
+
+        <ol id="progress" class="progress hidden">
+          <li data-step="extract">Extraction par le modèle</li>
+          <li data-step="validate">Validation du schéma</li>
+          <li data-step="ground">Vérification d'ancrage</li>
+          <li data-step="render">Rendu de la grille</li>
+        </ol>
+        <div id="elapsed" class="status hidden"></div>
+        <button id="btn-cancel" class="ghost small hidden">Annuler la génération</button>
+        <div id="result-box" class="result hidden"></div>
+        <div id="downloads" class="downloads hidden"></div>
+        <p id="status" class="status" role="status"></p>
+      </div>
+      <button id="collapse-left" class="collapse-btn" title="Replier le panneau" aria-label="Replier le panneau d'entrée">⟨</button>
+    </section>
+
+    <!-- Editeur central -->
+    <section class="editor" aria-label="Éditeur de la grille">
+      <div id="empty-state" class="empty-state">
+        <h2>Bienvenue</h2>
+        <p>Collez le récit d'un processus dans le panneau de gauche (ou chargez l'exemple).</p>
+        <p>Générez la grille MIP : l'IA structure le récit en acteurs, étapes et métadonnées.</p>
+        <p>Relisez et corrigez la grille ici même — chaque valeur douteuse est marquée « ≈ » — puis marquez-la validée.</p>
+      </div>
+      <iframe id="drawio" title="Éditeur Draw.io de la grille MIP" class="hidden"
+        src="https://embed.diagrams.net/?embed=1&proto=json&spin=1&libraries=0&noSaveBtn=1&saveAndExit=0"></iframe>
+    </section>
+
+    <!-- Panneau droit : relecture et validation -->
+    <section id="right-panel" class="side-panel right collapsed" aria-label="Liste de validation">
+      <button id="collapse-right" class="collapse-btn" title="Déplier le panneau" aria-label="Déplier le panneau de validation">⟩</button>
+      <div class="panel-scroll">
+        <div class="field-head">
+          <label>Liste de validation</label>
+          <span id="validation-counter" class="counter"></span>
+        </div>
+        <p class="hint">À parcourir avec le métier pendant la relecture. Les cases cochées sont enregistrées dans la session.</p>
+        <div id="validation-panel"></div>
+        <button id="btn-validate" class="primary hidden">Marquer comme validé par le métier</button>
+        <p id="validate-status" class="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Historique des sessions -->
+  <dialog id="sessions-dialog">
+    <div class="dialog-head">
+      <h2>Sessions</h2>
+      <button id="btn-close-sessions" class="ghost" aria-label="Fermer">✕</button>
+    </div>
+    <p class="hint">Chaque génération ouvre une session journalisée : sortie brute de l'IA, sauvegardes de relecture, validation métier.</p>
+    <div id="sessions-list"></div>
+    <div id="session-diff" class="hidden"></div>
+  </dialog>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

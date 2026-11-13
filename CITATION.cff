@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite the paper below."
+title: "From Narrative to Process Model: Enabling Non-Expert Participation Through an Intermediate Representation (companion repository)"
+authors:
+  - family-names: Nasser
+    given-names: Yasser
+    affiliation: University of Geneva
+  - family-names: Ralyté
+    given-names: Jolita
+    affiliation: University of Geneva
+    orcid: "https://orcid.org/0000-0001-8561-3567"
+repository-code: "https://github.com/YsrNsr/ipm-narrative-to-process-model"
+license: MIT
+date-released: 2026-11-17
+preferred-citation:
+  type: conference-paper
+  title: "From Narrative to Process Model: Enabling Non-Expert Participation Through an Intermediate Representation"
+  authors:
+    - family-names: Nasser
+      given-names: Yasser
+    - family-names: Ralyté
+      given-names: Jolita
+  collection-title: "Companion Proceedings of the 19th IFIP WG 8.1 Working Conference on the Practice of Enterprise Modeling (PoEM-C 2026)"
+  conference:
+    name: "PoEM 2026"
+    city: Mytilene
+    country: GR
+  publisher:
+    name: "CEUR Workshop Proceedings"
+  year: 2026

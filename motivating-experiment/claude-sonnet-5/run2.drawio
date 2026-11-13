@@ -1,0 +1,160 @@
+<mxfile host="Electron" agent="Claude">
+  <diagram name="Processus - Demande de congés" id="conges1">
+    <mxGraphModel dx="2638" dy="2242" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2450" pageHeight="820" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lane1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontStyle=1;fontSize=15;fillColor=#FFF9E6;strokeColor=#d6b656;" value="Collaborateur" vertex="1">
+          <mxGeometry height="150" width="2450" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontStyle=1;fontSize=15;fillColor=#EBF3FF;strokeColor=#6c8ebf;" value="Gestionnaire des congés (RH) - narrateur" vertex="1">
+          <mxGeometry height="260" width="2450" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontStyle=1;fontSize=15;fillColor=#FFEFDB;strokeColor=#d79b00;" value="Responsable direct (manager du collaborateur)" vertex="1">
+          <mxGeometry height="150" width="2450" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="lane4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontStyle=1;fontSize=15;fillColor=#F1E6F5;strokeColor=#9673a6;" value="Direction / N+2 (validations supérieures)" vertex="1">
+          <mxGeometry height="240" width="2450" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Debut : le collaborateur envoie une demande de conges" vertex="1">
+          <mxGeometry height="60" width="180" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Verifier le solde de conges du collaborateur" vertex="1">
+          <mxGeometry height="60" width="170" x="240" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Solde suffisant ?" vertex="1">
+          <mxGeometry height="100" width="140" x="470" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="n4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Informer le collaborateur que le solde est insuffisant" vertex="1">
+          <mxGeometry height="60" width="180" x="670" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="n5" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;" value="Le collaborateur retire sa demande ou propose un arrangement" vertex="1">
+          <mxGeometry height="90" width="170" x="900" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;" value="Fin : demande retiree" vertex="1">
+          <mxGeometry height="60" width="160" x="1130" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1E6F5;strokeColor=#9673a6;fontSize=12;" value="Transmettre la demande de conge sans solde a la Direction" vertex="1">
+          <mxGeometry height="60" width="200" x="1120" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F1E6F5;strokeColor=#9673a6;fontSize=12;" value="La Direction valide-t-elle le conge sans solde ?" vertex="1">
+          <mxGeometry height="90" width="150" x="1360" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="n9a" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Fin : demande refusee (pas d&#39;accord de la Direction)" vertex="1">
+          <mxGeometry height="60" width="180" x="1560" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Transmettre la demande au responsable direct" vertex="1">
+          <mxGeometry height="60" width="180" x="670" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFEFDB;strokeColor=#d79b00;fontSize=12;" value="Le responsable direct valide-t-il immediatement ?" vertex="1">
+          <mxGeometry height="90" width="150" x="900" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEFDB;strokeColor=#d79b00;fontSize=12;" value="Mettre la demande en attente (charge de travail / projet en cours)" vertex="1">
+          <mxGeometry height="60" width="200" x="1100" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="n13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Rediscuter avec le collaborateur pour decaler les dates" vertex="1">
+          <mxGeometry height="60" width="200" x="1100" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="n14" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Duree demandee superieure a 10 jours consecutifs ?" vertex="1">
+          <mxGeometry height="100" width="150" x="1120" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="n15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1E6F5;strokeColor=#9673a6;fontSize=12;" value="Demander la validation du N+2 (responsable du responsable)" vertex="1">
+          <mxGeometry height="60" width="210" x="1370" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="n16" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=#F1E6F5;strokeColor=#9673a6;fontSize=12;" value="Le N+2 valide-t-il ?" vertex="1">
+          <mxGeometry height="90" width="140" x="1630" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="n17" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" value="Fin : demande refusee (pas d&#39;accord du N+2)" vertex="1">
+          <mxGeometry height="60" width="180" x="1820" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="nreg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Enregistrer le conge dans le systeme de paie" vertex="1">
+          <mxGeometry height="60" width="200" x="1750" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="nconf" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;" value="Envoyer une confirmation au collaborateur (dates validees)" vertex="1">
+          <mxGeometry height="60" width="200" x="2000" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="nend" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;" value="Fin : conge valide" vertex="1">
+          <mxGeometry height="60" width="170" x="2250" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="note1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;fontSize=10;fontColor=#666666;align=left;spacingLeft=6;" value="Cas hors perimetre mentionne dans le recit : si le collaborateur change d&#39;avis en cours de traitement, la demande est reprise separement (non detaille dans le texte)." vertex="1">
+          <mxGeometry height="90" width="280" x="2150" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="n1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" target="n2" value="envoie la demande">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="n2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#b85450;" target="n4" value="Non">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="n3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#82b366;" target="n10" value="Oui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="n4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" target="n6" value="retire la demande">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="n5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;" target="n7" value="propose un conge sans solde">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="n7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="n8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#b85450;" target="n9a" value="Non">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="n8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#82b366;" target="nreg" value="Oui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="n10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="n11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#82b366;" target="n14" value="Oui (validation immediate)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="n11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#b85450;" target="n12" value="Non (en attente)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="n12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="n13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="n13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;dashed=1;strokeColor=#999999;" target="n10" value="nouvelle transmission (dates ajustees)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="360" />
+              <mxPoint x="800" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" edge="1" parent="1" source="n14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#82b366;" target="nreg" value="Non (10 jours ou moins)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1650" y="245" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" edge="1" parent="1" source="n14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#b85450;" target="n15" value="Oui (&gt; 10 jours)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" edge="1" parent="1" source="n15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="n16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" edge="1" parent="1" source="n16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#82b366;" target="nreg" value="Oui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" edge="1" parent="1" source="n16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontColor=#b85450;" target="n17" value="Non">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e21" edge="1" parent="1" source="nreg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="nconf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e22" edge="1" parent="1" source="nconf" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" target="nend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

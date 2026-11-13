@@ -1,0 +1,34 @@
+# Cas 02 : commande client et livraison. Synthetique. Longueur moyenne, recit assez ordonne, metadonnees riches.
+
+Interlocuteur 1 (00:00)
+Alors, une commande, ça part toujours du client. Il passe sa commande sur la boutique en ligne, ou alors il nous envoie un bon de commande par mail quand c'est un client professionnel. Les deux arrivent au même endroit de toute façon.
+
+Interlocuteur 2 (00:14)
+D'accord, et ensuite qui la traite ?
+
+Interlocuteur 1 (00:16)
+C'est l'assistante commerciale. Elle récupère la commande dans le CRM et elle contrôle que le client n'a pas d'impayé. Ça lui prend deux minutes quand tout va bien, mais si le client est bloqué en compta il faut relancer et là on perd facilement deux jours.
+
+Interlocuteur 2 (00:32)
+Et après le contrôle ?
+
+Interlocuteur 1 (00:34)
+Elle valide la commande dans l'ERP, ce qui génère l'ordre de préparation. C'est cet ordre qui part à l'entrepôt.
+
+Interlocuteur 1 (00:43)
+Au magasin, le préparateur sort les articles avec sa douchette, il scanne tout dans le WMS, et il édite le bon de livraison. En moyenne une demi-journée, parce qu'ils groupent les commandes par tournée.
+
+Interlocuteur 2 (00:57)
+Il y a des soucis à ce niveau-là ?
+
+Interlocuteur 1 (00:59)
+Ah oui, le grand classique c'est la rupture de stock. Le stock théorique dit qu'il y a la pièce, le préparateur va au rayon et il n'y a rien. Là il faut refaire tout le circuit.
+
+Interlocuteur 1 (01:12)
+Bon, ensuite le transporteur vient chercher les colis, il signe le bon de livraison et il enregistre l'enlèvement sur son portail. Le délai annoncé c'est quarante-huit heures.
+
+Interlocuteur 2 (01:24)
+Et la facturation, c'est à quel moment ?
+
+Interlocuteur 1 (01:26)
+À la fin. Le service comptabilité émet la facture depuis l'ERP une fois que la livraison est confirmée. Un jour, pas plus. Le problème c'est quand le transporteur ne remonte pas la preuve de livraison, on facture en retard.

@@ -1,0 +1,25 @@
+# Cas 04 : remboursement d'une note de frais. Synthetique. Cas court, volontairement pauvre en metadonnees.
+
+Interlocuteur 1 (00:00)
+C'est simple. Le collaborateur saisit sa note de frais et il joint les justificatifs.
+
+Interlocuteur 2 (00:07)
+Sur quel support ?
+
+Interlocuteur 1 (00:08)
+Alors ça dépend des services, il y en a qui font encore ça sur papier. Bon, disons que c'est saisi, peu importe.
+
+Interlocuteur 1 (00:15)
+Ensuite le supérieur hiérarchique regarde et il approuve ou il refuse. S'il refuse il renvoie au collaborateur avec un motif.
+
+Interlocuteur 2 (00:24)
+Et quand c'est approuvé ?
+
+Interlocuteur 1 (00:25)
+La comptabilité contrôle que les justificatifs sont conformes, et elle procède au remboursement sur la paie du mois suivant. Voilà, il n'y a rien de plus.
+
+Interlocuteur 2 (00:36)
+Il n'y a pas de difficulté particulière ?
+
+Interlocuteur 1 (00:38)
+Non, franchement pas. Enfin si, les justificatifs illisibles, mais ça reste marginal.

@@ -1,0 +1,429 @@
+{
+  "generatedAt": "2026-07-26T20:14:14.485Z",
+  "provider": "ollama",
+  "model": "mistral",
+  "promptVersion": "2",
+  "threshold": 0.4,
+  "results": [
+    {
+      "id": "02_commande_livraison",
+      "kind": "corpus",
+      "baseId": "02_commande_livraison",
+      "fromCache": true,
+      "latencyMs": 1466116,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 7,
+            "recalled": 6,
+            "recall": 0.8571428571428571
+          },
+          "outils": {
+            "expected": 6,
+            "recalled": 6,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 3,
+            "recalled": 3,
+            "recall": 1
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 1
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 5,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 1,
+            "removed": 2,
+            "renamed": 8
+          },
+          "total": 17
+        },
+        "coverage": {
+          "actors": {
+            "matched": 5,
+            "generated": 5,
+            "expected": 5,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 6,
+            "generated": 6,
+            "expected": 6,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "attachment": {
+          "correct": 6,
+          "pairs": 6,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 6,
+          "expectedSteps": 6,
+          "ratio": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "03_recrutement",
+      "kind": "corpus",
+      "baseId": "03_recrutement",
+      "fromCache": true,
+      "latencyMs": 853295,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 7,
+            "recalled": 5,
+            "recall": 0.7142857142857143
+          },
+          "outils": {
+            "expected": 3,
+            "recalled": 3,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 3,
+            "recalled": 3,
+            "recall": 1
+          },
+          "frictions": {
+            "expected": 2,
+            "recalled": 1,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 4,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 3,
+            "removed": 4,
+            "renamed": 6
+          },
+          "total": 17
+        },
+        "coverage": {
+          "actors": {
+            "matched": 3,
+            "generated": 3,
+            "expected": 3,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 7,
+            "generated": 7,
+            "expected": 7,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          }
+        },
+        "attachment": {
+          "correct": 7,
+          "pairs": 7,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 7,
+          "expectedSteps": 7,
+          "ratio": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "04_note_de_frais",
+      "kind": "corpus",
+      "baseId": "04_note_de_frais",
+      "fromCache": true,
+      "latencyMs": 659464,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "outils": {
+            "expected": 0,
+            "recalled": 0,
+            "recall": null
+          },
+          "temps": {
+            "expected": 1,
+            "recalled": 0,
+            "recall": 0
+          },
+          "frictions": {
+            "expected": 2,
+            "recalled": 1,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 0,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 1,
+            "removed": 0,
+            "renamed": 2,
+            "reassigned": 0
+          },
+          "metadata": {
+            "added": 2,
+            "removed": 2,
+            "renamed": 3
+          },
+          "total": 10
+        },
+        "coverage": {
+          "actors": {
+            "matched": 3,
+            "generated": 3,
+            "expected": 3,
+            "precision": 1,
+            "recall": 1,
+            "f1": 1
+          },
+          "tasks": {
+            "matched": 3,
+            "generated": 3,
+            "expected": 4,
+            "precision": 1,
+            "recall": 0.75,
+            "f1": 0.8571428571428571
+          }
+        },
+        "attachment": {
+          "correct": 3,
+          "pairs": 3,
+          "accuracy": 1
+        },
+        "granularity": {
+          "generatedSteps": 3,
+          "expectedSteps": 4,
+          "ratio": 0.75
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "05_intervention_panne",
+      "kind": "corpus",
+      "baseId": "05_intervention_panne",
+      "fromCache": true,
+      "latencyMs": 900777,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 7,
+            "recalled": 4,
+            "recall": 0.5714285714285714
+          },
+          "outils": {
+            "expected": 4,
+            "recalled": 4,
+            "recall": 1
+          },
+          "temps": {
+            "expected": 4,
+            "recalled": 2,
+            "recall": 0.5
+          },
+          "frictions": {
+            "expected": 3,
+            "recalled": 1,
+            "recall": 0.3333333333333333
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 1,
+            "removed": 2,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 1,
+            "removed": 1,
+            "renamed": 6,
+            "reassigned": 1
+          },
+          "metadata": {
+            "added": 4,
+            "removed": 7,
+            "renamed": 4
+          },
+          "total": 27
+        },
+        "coverage": {
+          "actors": {
+            "matched": 4,
+            "generated": 6,
+            "expected": 5,
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "f1": 0.7272727272727272
+          },
+          "tasks": {
+            "matched": 7,
+            "generated": 8,
+            "expected": 8,
+            "precision": 0.875,
+            "recall": 0.875,
+            "f1": 0.875
+          }
+        },
+        "attachment": {
+          "correct": 6,
+          "pairs": 7,
+          "accuracy": 0.8571428571428571
+        },
+        "granularity": {
+          "generatedSteps": 8,
+          "expectedSteps": 8,
+          "ratio": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    },
+    {
+      "id": "06_arrivee_collaborateur",
+      "kind": "corpus",
+      "baseId": "06_arrivee_collaborateur",
+      "fromCache": false,
+      "latencyMs": 842751,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 10,
+            "recalled": 6,
+            "recall": 0.6
+          },
+          "outils": {
+            "expected": 4,
+            "recalled": 3,
+            "recall": 0.75
+          },
+          "temps": {
+            "expected": 3,
+            "recalled": 2,
+            "recall": 0.6666666666666666
+          },
+          "frictions": {
+            "expected": 4,
+            "recalled": 0,
+            "recall": 0
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 0,
+            "removed": 3,
+            "renamed": 0
+          },
+          "tasks": {
+            "added": 2,
+            "removed": 2,
+            "renamed": 3,
+            "reassigned": 1
+          },
+          "metadata": {
+            "added": 7,
+            "removed": 2,
+            "renamed": 2
+          },
+          "total": 22
+        },
+        "coverage": {
+          "actors": {
+            "matched": 5,
+            "generated": 8,
+            "expected": 5,
+            "precision": 0.625,
+            "recall": 1,
+            "f1": 0.7692307692307693
+          },
+          "tasks": {
+            "matched": 6,
+            "generated": 8,
+            "expected": 8,
+            "precision": 0.75,
+            "recall": 0.75,
+            "f1": 0.75
+          }
+        },
+        "attachment": {
+          "correct": 5,
+          "pairs": 6,
+          "accuracy": 0.8333333333333334
+        },
+        "granularity": {
+          "generatedSteps": 8,
+          "expectedSteps": 8,
+          "ratio": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    }
+  ]
+}

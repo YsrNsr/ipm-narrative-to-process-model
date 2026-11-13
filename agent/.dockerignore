@@ -1,0 +1,11 @@
+# jamais dans l'image : secrets, donnees de sessions, donnees
+# participants sous consentement, historique git
+.env
+logs/
+etude-utilisateurs/
+.git/
+node_modules/
+test/
+eval/
+Docs/
+*.md

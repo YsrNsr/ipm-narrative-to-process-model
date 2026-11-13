@@ -1,0 +1,201 @@
+{
+  "generatedAt": "2026-07-26T17:24:29.606Z",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "promptVersion": "2",
+  "thresholds": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "rows": [
+    {
+      "label": "02_commande_livraison",
+      "rk": 0,
+      "byThreshold": [
+        {
+          "threshold": 0.3,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.4,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.5,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.6,
+          "actorsF1": 1,
+          "tasksF1": 0.8333333333333334
+        },
+        {
+          "threshold": 0.7,
+          "actorsF1": 1,
+          "tasksF1": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "label": "03_recrutement",
+      "rk": 0,
+      "byThreshold": [
+        {
+          "threshold": 0.3,
+          "actorsF1": 0.8571428571428571,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.4,
+          "actorsF1": 0.8571428571428571,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.5,
+          "actorsF1": 0.8571428571428571,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.6,
+          "actorsF1": 0.8571428571428571,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.7,
+          "actorsF1": 0.8571428571428571,
+          "tasksF1": 1
+        }
+      ]
+    },
+    {
+      "label": "04_note_de_frais",
+      "rk": 0,
+      "byThreshold": [
+        {
+          "threshold": 0.3,
+          "actorsF1": 1,
+          "tasksF1": 0.888888888888889
+        },
+        {
+          "threshold": 0.4,
+          "actorsF1": 1,
+          "tasksF1": 0.888888888888889
+        },
+        {
+          "threshold": 0.5,
+          "actorsF1": 1,
+          "tasksF1": 0.888888888888889
+        },
+        {
+          "threshold": 0.6,
+          "actorsF1": 1,
+          "tasksF1": 0.888888888888889
+        },
+        {
+          "threshold": 0.7,
+          "actorsF1": 1,
+          "tasksF1": 0.888888888888889
+        }
+      ]
+    },
+    {
+      "label": "05_intervention_panne",
+      "rk": 0,
+      "byThreshold": [
+        {
+          "threshold": 0.3,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.4,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.5,
+          "actorsF1": 1,
+          "tasksF1": 0.875
+        },
+        {
+          "threshold": 0.6,
+          "actorsF1": 1,
+          "tasksF1": 0.875
+        },
+        {
+          "threshold": 0.7,
+          "actorsF1": 1,
+          "tasksF1": 0.625
+        }
+      ]
+    },
+    {
+      "label": "06_arrivee_collaborateur",
+      "rk": 0,
+      "byThreshold": [
+        {
+          "threshold": 0.3,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.4,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.5,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.6,
+          "actorsF1": 1,
+          "tasksF1": 1
+        },
+        {
+          "threshold": 0.7,
+          "actorsF1": 1,
+          "tasksF1": 1
+        }
+      ]
+    },
+    {
+      "label": "07_real_interview (hors moyenne)",
+      "rk": 2,
+      "byThreshold": [
+        {
+          "threshold": 0.3,
+          "actorsF1": 0.6,
+          "tasksF1": 0.8888888888888888
+        },
+        {
+          "threshold": 0.4,
+          "actorsF1": 0.6,
+          "tasksF1": 0.5555555555555556
+        },
+        {
+          "threshold": 0.5,
+          "actorsF1": 0.6,
+          "tasksF1": 0.4444444444444444
+        },
+        {
+          "threshold": 0.6,
+          "actorsF1": 0.6,
+          "tasksF1": 0.4444444444444444
+        },
+        {
+          "threshold": 0.7,
+          "actorsF1": 0.4000000000000001,
+          "tasksF1": 0.1111111111111111
+        }
+      ]
+    }
+  ]
+}

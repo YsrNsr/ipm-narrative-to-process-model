@@ -1,0 +1,28 @@
+# Cas 05 : intervention sur panne d'un equipement client. Synthetique. Longueur moyenne, tres riche en metadonnees, quelques ambiguites d'attribution.
+
+Interlocuteur 1 (00:00)
+Tout commence par l'appel du client au centre de contact. Il décrit sa panne, et l'opérateur ouvre un ticket dans l'outil de gestion des incidents. On a un engagement de prise en charge en trente minutes.
+
+Interlocuteur 2 (00:15)
+Et le ticket part directement au technicien ?
+
+Interlocuteur 1 (00:17)
+Non, il passe d'abord par le dispatcheur. C'est lui qui qualifie l'urgence, il regarde le contrat de maintenance du client dans le CRM, et il classe en priorité un, deux ou trois. Un quart d'heure environ. Le souci c'est que le contrat n'est pas toujours à jour dans le CRM, et là il doit appeler le commercial pour vérifier.
+
+Interlocuteur 1 (00:38)
+Une fois qualifié, le dispatcheur planifie l'intervention et affecte un technicien selon la zone géographique. Il édite l'ordre d'intervention.
+
+Interlocuteur 2 (00:48)
+Et sur place, comment ça se passe ?
+
+Interlocuteur 1 (00:50)
+Le technicien se déplace avec son ordre d'intervention, il diagnostique la panne et il répare si il a la pièce dans son véhicule. Compter deux heures en moyenne. Le vrai problème c'est quand la pièce n'est pas en stock véhicule, il faut commander et repasser, et là on part sur quatre à cinq jours.
+
+Interlocuteur 1 (01:08)
+À la fin de l'intervention il remplit le rapport d'intervention sur son application mobile et il le fait signer au client.
+
+Interlocuteur 2 (01:16)
+Et ensuite ?
+
+Interlocuteur 1 (01:17)
+Le rapport remonte automatiquement, et le centre de contact clôture le ticket. Puis la facturation édite la facture depuis l'ERP, sauf si l'intervention est couverte par le contrat de maintenance, auquel cas il n'y a pas de facture. Deux jours pour la facturation.

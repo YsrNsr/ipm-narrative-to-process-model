@@ -1,0 +1,87 @@
+{
+  "_note": "Reference annotee selon REGLES_ANNOTATION_CORPUS.md. Le diagnostic et la reparation sont regroupes car ils partagent le meme resultat (R3). La facturation conditionnelle est annotee comme etape avec la condition en friction, le Modele ne portant pas de branchement.",
+  "process": "Intervention sur panne d'un equipement client",
+  "actors": ["Client", "Centre de contact", "Dispatcheur", "Technicien", "Facturation"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Client",
+      "label": "Appeler le centre de contact et decrire la panne",
+      "documents_in": [],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Centre de contact",
+      "label": "Ouvrir le ticket",
+      "documents_in": [],
+      "documents_out": ["Ticket"],
+      "tools": ["Outil de gestion des incidents"],
+      "duration": "30 minutes",
+      "friction": ""
+    },
+    {
+      "id": "s3",
+      "actor": "Dispatcheur",
+      "label": "Qualifier l'urgence",
+      "documents_in": ["Ticket"],
+      "documents_out": [],
+      "tools": ["CRM"],
+      "duration": "un quart d'heure",
+      "friction": "Contrat de maintenance pas toujours a jour dans le CRM"
+    },
+    {
+      "id": "s4",
+      "actor": "Dispatcheur",
+      "label": "Planifier l'intervention et affecter un technicien",
+      "documents_in": [],
+      "documents_out": ["Ordre d'intervention"],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s5",
+      "actor": "Technicien",
+      "label": "Diagnostiquer et reparer la panne",
+      "documents_in": ["Ordre d'intervention"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "2 heures",
+      "friction": "Piece absente du stock vehicule, quatre a cinq jours supplementaires"
+    },
+    {
+      "id": "s6",
+      "actor": "Technicien",
+      "label": "Remplir le rapport d'intervention et le faire signer",
+      "documents_in": [],
+      "documents_out": ["Rapport d'intervention"],
+      "tools": ["Application mobile"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s7",
+      "actor": "Centre de contact",
+      "label": "Cloturer le ticket",
+      "documents_in": ["Rapport d'intervention"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s8",
+      "actor": "Facturation",
+      "label": "Editer la facture",
+      "documents_in": [],
+      "documents_out": ["Facture"],
+      "tools": ["ERP"],
+      "duration": "2 jours",
+      "friction": "Pas de facture si l'intervention est couverte par le contrat"
+    }
+  ]
+}

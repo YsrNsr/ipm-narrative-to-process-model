@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-08-01T17:57:12.662Z",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "promptVersion": "4",
+  "threshold": 0.4,
+  "results": [
+    {
+      "id": "07_real_interview",
+      "kind": "corpus",
+      "baseId": "07_real_interview",
+      "fromCache": false,
+      "latencyMs": 36229,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 12,
+            "recalled": 8,
+            "recall": 0.6666666666666666
+          },
+          "outils": {
+            "expected": 3,
+            "recalled": 0,
+            "recall": 0
+          },
+          "temps": {
+            "expected": 0,
+            "recalled": 0,
+            "recall": null
+          },
+          "frictions": {
+            "expected": 4,
+            "recalled": 2,
+            "recall": 0.5
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 2,
+            "removed": 2,
+            "renamed": 1
+          },
+          "tasks": {
+            "added": 2,
+            "removed": 0,
+            "renamed": 7,
+            "reassigned": 3
+          },
+          "metadata": {
+            "added": 8,
+            "removed": 15,
+            "renamed": 7
+          },
+          "total": 47
+        },
+        "coverage": {
+          "actors": {
+            "matched": 3,
+            "generated": 5,
+            "expected": 5,
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1": 0.6
+          },
+          "tasks": {
+            "matched": 7,
+            "generated": 7,
+            "expected": 9,
+            "precision": 1,
+            "recall": 0.7777777777777778,
+            "f1": 0.8750000000000001
+          }
+        },
+        "attachment": {
+          "correct": 4,
+          "pairs": 7,
+          "accuracy": 0.5714285714285714
+        },
+        "granularity": {
+          "generatedSteps": 7,
+          "expectedSteps": 9,
+          "ratio": 0.7777777777777778
+        },
+        "inferred": {
+          "documents": 3,
+          "donnees": 7,
+          "outils": 1,
+          "temps": 0,
+          "volumes": 0,
+          "frictions": 4,
+          "procedure": 0,
+          "opportunites": 0,
+          "total": 15
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    }
+  ]
+}

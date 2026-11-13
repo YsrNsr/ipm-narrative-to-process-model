@@ -1,0 +1,37 @@
+# Cas 06 : arrivee d'un nouveau collaborateur. Synthetique. Cas long, six acteurs, recit avec digressions et acteurs implicites.
+
+Interlocuteur 1 (00:00)
+L'arrivée d'un nouveau, c'est typiquement le truc où tout le monde met un peu la main, et du coup personne ne sait vraiment qui fait quoi. Je vais essayer d'être clair.
+
+Interlocuteur 2 (00:10)
+Prenez votre temps.
+
+Interlocuteur 1 (00:12)
+Donc une fois que le contrat est signé, les ressources humaines créent le dossier du collaborateur dans le système de paie et elles envoient la fiche d'arrivée aux services concernés. C'est un mail type, avec la date d'entrée et le poste.
+
+Interlocuteur 1 (00:26)
+À partir de là il y a plusieurs choses qui se déclenchent. L'informatique crée le compte utilisateur et prépare le poste de travail. Ils commandent le matériel dans leur outil de gestion de parc. Il leur faut une semaine, minimum, et si on les prévient trois jours avant c'est mort, le nouveau arrive et il n'a pas d'ordinateur. Ça arrive plus souvent qu'on ne voudrait.
+
+Interlocuteur 2 (00:47)
+Et les accès aux bâtiments ?
+
+Interlocuteur 1 (00:49)
+Ah oui, les services généraux préparent le badge d'accès et attribuent une place. Deux jours, c'est rapide de leur côté.
+
+Interlocuteur 1 (00:58)
+Le jour de l'arrivée, c'est le manager qui accueille la personne, lui présente l'équipe et lui remet le livret d'accueil. Enfin, quand il est là. Parce que si le manager est en déplacement ce jour-là, c'est un collègue qui s'y colle, et forcément c'est moins bien fait.
+
+Interlocuteur 2 (01:14)
+Il y a une formation prévue ?
+
+Interlocuteur 1 (01:16)
+Oui, dans la première semaine il y a la session d'intégration animée par les ressources humaines, avec la présentation de l'entreprise et la partie sécurité. Une demi-journée. Elle est mensuelle, donc si vous arrivez le mauvais jour vous attendez trois semaines.
+
+Interlocuteur 1 (01:32)
+Et puis à la fin de la période d'essai, le manager rédige le bilan et le transmet aux ressources humaines, qui confirment l'engagement. Ça se fait dans l'outil d'évaluation.
+
+Interlocuteur 2 (01:43)
+Le collaborateur lui-même a des démarches à faire ?
+
+Interlocuteur 1 (01:45)
+Oui, il doit fournir ses documents personnels avant l'entrée, l'attestation d'assurance et les coordonnées bancaires notamment. Sans ça la paie ne peut pas être lancée.

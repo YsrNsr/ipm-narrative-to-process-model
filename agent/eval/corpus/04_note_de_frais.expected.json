@@ -1,0 +1,47 @@
+{
+  "_note": "Reference annotee selon REGLES_ANNOTATION_CORPUS.md. Cas volontairement pauvre en metadonnees : le support de saisie est explicitement laisse indetermine par le locuteur, donc aucun outil n'est annote (R1). La friction des justificatifs illisibles est mentionnee tardivement et rattachee au controle comptable (R6).",
+  "process": "Remboursement d'une note de frais",
+  "actors": ["Collaborateur", "Superieur hierarchique", "Comptabilite"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Collaborateur",
+      "label": "Saisir la note de frais et joindre les justificatifs",
+      "documents_in": [],
+      "documents_out": ["Note de frais", "Justificatifs"],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Superieur hierarchique",
+      "label": "Approuver ou refuser la note de frais",
+      "documents_in": ["Note de frais"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": "Renvoi au collaborateur en cas de refus"
+    },
+    {
+      "id": "s3",
+      "actor": "Comptabilite",
+      "label": "Controler la conformite des justificatifs",
+      "documents_in": ["Justificatifs"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": "Justificatifs illisibles"
+    },
+    {
+      "id": "s4",
+      "actor": "Comptabilite",
+      "label": "Proceder au remboursement",
+      "documents_in": [],
+      "documents_out": [],
+      "tools": [],
+      "duration": "sur la paie du mois suivant",
+      "friction": ""
+    }
+  ]
+}

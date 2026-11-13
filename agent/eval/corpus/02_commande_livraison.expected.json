@@ -1,0 +1,67 @@
+{
+  "_note": "Reference annotee selon REGLES_ANNOTATION_CORPUS.md. Le canal d'entree est double (boutique en ligne ou bon de commande par mail) mais aboutit au meme endroit : une seule etape (R3).",
+  "process": "Traitement d'une commande client jusqu'a la facturation",
+  "actors": ["Client", "Assistante commerciale", "Preparateur", "Transporteur", "Service comptabilite"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Client",
+      "label": "Passer la commande",
+      "documents_in": [],
+      "documents_out": ["Bon de commande"],
+      "tools": ["Boutique en ligne"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Assistante commerciale",
+      "label": "Recuperer la commande et controler les impayes",
+      "documents_in": ["Bon de commande"],
+      "documents_out": [],
+      "tools": ["CRM"],
+      "duration": "2 minutes",
+      "friction": "Client bloque en comptabilite, deux jours perdus"
+    },
+    {
+      "id": "s3",
+      "actor": "Assistante commerciale",
+      "label": "Valider la commande",
+      "documents_in": [],
+      "documents_out": ["Ordre de preparation"],
+      "tools": ["ERP"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s4",
+      "actor": "Preparateur",
+      "label": "Preparer les articles et editer le bon de livraison",
+      "documents_in": ["Ordre de preparation"],
+      "documents_out": ["Bon de livraison"],
+      "tools": ["WMS"],
+      "duration": "une demi-journee",
+      "friction": "Rupture de stock non reflete par le stock theorique"
+    },
+    {
+      "id": "s5",
+      "actor": "Transporteur",
+      "label": "Enlever les colis et enregistrer l'enlevement",
+      "documents_in": ["Bon de livraison"],
+      "documents_out": [],
+      "tools": ["Portail transporteur"],
+      "duration": "48 heures",
+      "friction": ""
+    },
+    {
+      "id": "s6",
+      "actor": "Service comptabilite",
+      "label": "Emettre la facture",
+      "documents_in": [],
+      "documents_out": ["Facture"],
+      "tools": ["ERP"],
+      "duration": "1 jour",
+      "friction": "Preuve de livraison non remontee par le transporteur"
+    }
+  ]
+}

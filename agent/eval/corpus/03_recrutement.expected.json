@@ -1,0 +1,78 @@
+{
+  "_note": "Reference annotee selon REGLES_ANNOTATION_CORPUS.md. Recit desordonne : l'ordre suit le deroulement reel et non l'ordre d'apparition (R4). La prise de references est mentionnee en dernier mais se situe apres les entretiens, comme le precise le locuteur.",
+  "_correction": "Acteur 'Candidat' retire en application de R3 bis : le texte ne lui attribue aucune action, il n'est que destinataire du contrat. La version initiale de cette reference le listait a tort.",
+  "process": "Recrutement d'un collaborateur",
+  "actors": ["Responsable de service", "Direction financiere", "Ressources humaines"],
+  "steps": [
+    {
+      "id": "s1",
+      "actor": "Responsable de service",
+      "label": "Remplir la demande d'ouverture de poste",
+      "documents_in": [],
+      "documents_out": ["Demande d'ouverture de poste"],
+      "tools": ["Intranet"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s2",
+      "actor": "Direction financiere",
+      "label": "Valider le budget",
+      "documents_in": ["Demande d'ouverture de poste"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "1 semaine",
+      "friction": "Delai allonge en periode de cloture"
+    },
+    {
+      "id": "s3",
+      "actor": "Ressources humaines",
+      "label": "Rediger et publier l'annonce",
+      "documents_in": [],
+      "documents_out": ["Annonce"],
+      "tools": ["ATS"],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s4",
+      "actor": "Ressources humaines",
+      "label": "Trier les candidatures et transmettre la liste courte",
+      "documents_in": ["Candidatures"],
+      "documents_out": ["Liste courte"],
+      "tools": ["ATS"],
+      "duration": "3 jours",
+      "friction": ""
+    },
+    {
+      "id": "s5",
+      "actor": "Responsable de service",
+      "label": "Mener les entretiens",
+      "documents_in": ["Liste courte"],
+      "documents_out": [],
+      "tools": [],
+      "duration": "2 semaines",
+      "friction": "Difficulte a caler les agendas"
+    },
+    {
+      "id": "s6",
+      "actor": "Responsable de service",
+      "label": "Prendre les references",
+      "documents_in": [],
+      "documents_out": [],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    },
+    {
+      "id": "s7",
+      "actor": "Ressources humaines",
+      "label": "Etablir et envoyer le contrat",
+      "documents_in": [],
+      "documents_out": ["Contrat"],
+      "tools": [],
+      "duration": "",
+      "friction": ""
+    }
+  ]
+}

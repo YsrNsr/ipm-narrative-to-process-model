@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-07-26T17:23:32.079Z",
+  "provider": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "promptVersion": "2",
+  "threshold": 0.4,
+  "results": [
+    {
+      "id": "07_real_interview",
+      "kind": "corpus",
+      "baseId": "07_real_interview",
+      "fromCache": false,
+      "latencyMs": 20466,
+      "robustness": {
+        "firstTryValid": true,
+        "repaired": false
+      },
+      "scores": {
+        "metadata": {
+          "documents": {
+            "expected": 12,
+            "recalled": 2,
+            "recall": 0.16666666666666666
+          },
+          "outils": {
+            "expected": 3,
+            "recalled": 0,
+            "recall": 0
+          },
+          "temps": {
+            "expected": 0,
+            "recalled": 0,
+            "recall": null
+          },
+          "frictions": {
+            "expected": 4,
+            "recalled": 1,
+            "recall": 0.25
+          }
+        },
+        "editEffort": {
+          "actors": {
+            "added": 2,
+            "removed": 2,
+            "renamed": 1
+          },
+          "tasks": {
+            "added": 4,
+            "removed": 4,
+            "renamed": 5,
+            "reassigned": 4
+          },
+          "metadata": {
+            "added": 8,
+            "removed": 26,
+            "renamed": 1
+          },
+          "total": 57
+        },
+        "coverage": {
+          "actors": {
+            "matched": 3,
+            "generated": 5,
+            "expected": 5,
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1": 0.6
+          },
+          "tasks": {
+            "matched": 5,
+            "generated": 9,
+            "expected": 9,
+            "precision": 0.5555555555555556,
+            "recall": 0.5555555555555556,
+            "f1": 0.5555555555555556
+          }
+        },
+        "attachment": {
+          "correct": 1,
+          "pairs": 5,
+          "accuracy": 0.2
+        },
+        "granularity": {
+          "generatedSteps": 9,
+          "expectedSteps": 9,
+          "ratio": 1
+        },
+        "threshold": 0.4,
+        "metaThreshold": 0.3
+      }
+    }
+  ]
+}
